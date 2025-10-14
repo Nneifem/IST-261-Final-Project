@@ -3,20 +3,20 @@ package com.example.honkaistarrailteammatch.model;
 
 public class Player {
     private String username;
-    private String email;
-    private String[] hsrCharacters;
+    private String[] ownedCharacters;
+    private String[] selectedCharacters;
 
     // getters
     public String getUsername() {
         return username;
     }
 
-    public String getEmail() {
-        return email;
+    public String[] getOwnedCharacters() {
+        return ownedCharacters;
     }
 
-    public String[] getHsrCharacters() {
-        return hsrCharacters;
+    public String[]  getSelectedCharacters() {
+        return  selectedCharacters;
     }
 
     // setters
@@ -24,11 +24,11 @@ public class Player {
         this.username = username;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setOwnedCharacters(String[] ownedCharacters) {
+        this.ownedCharacters = ownedCharacters;
     }
 
-    public void setHsrCharacters(String[] hsrCharacters) {
-        this.hsrCharacters = hsrCharacters;
+    public void setSelectedCharacters(String[] selectedCharacters) {
+        this.selectedCharacters = selectedCharacters;
     }
 }
