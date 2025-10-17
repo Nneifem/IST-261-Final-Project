@@ -20,7 +20,7 @@ public class Team {
     public void setCharacters(List<Character> characters) {
         this.playerCharacters = characters;
     }
-    
+
     public void setTeams(List<Team> teams) {
         this.teams = teams;
     }
