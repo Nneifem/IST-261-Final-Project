@@ -1,16 +1,16 @@
 package com.example.honkaistarrailteammatch.model;
 
 public class Team {
-    private String[] playerSelectedCharacters;
-    private String[] generatedTeam;
+    private String playerSelectedCharacters;
+    private String generatedTeam;
     private String teamExplaination;
 
     // getters
-    public String[] getPlayerSelectedCharacters() {
+    public String getPlayerSelectedCharacters() {
         return playerSelectedCharacters;
     }
 
-    public String[] getGeneratedTeam() {
+    public String getGeneratedTeam() {
         return generatedTeam;
     }
 
@@ -23,11 +23,11 @@ public class Team {
         this.teamExplaination = teamExplaination;
     }
 
-    public void setPlayerSelectedCharacters(String[] playerSelectedCharacters) {
+    public void setPlayerSelectedCharacters(String playerSelectedCharacters) {
         this.playerSelectedCharacters = playerSelectedCharacters;
     }
 
-    public void setGeneratedTeam(String[] generatedTeam) {
+    public void setGeneratedTeam(String generatedTeam) {
         this.generatedTeam = generatedTeam;
     }
 }

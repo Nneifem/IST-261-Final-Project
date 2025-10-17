@@ -3,20 +3,15 @@ package com.example.honkaistarrailteammatch.model;
 
 public class Player {
     private String username;
-    private String[] ownedCharacters;
-    private String[] selectedCharacters;
+    private String ownedCharacters;
 
     // getters
     public String getUsername() {
         return username;
     }
 
-    public String[] getOwnedCharacters() {
+    public String getOwnedCharacters() {
         return ownedCharacters;
-    }
-
-    public String[]  getSelectedCharacters() {
-        return  selectedCharacters;
     }
 
     // setters
@@ -24,11 +19,7 @@ public class Player {
         this.username = username;
     }
 
-    public void setOwnedCharacters(String[] ownedCharacters) {
+    public void setOwnedCharacters(String ownedCharacters) {
         this.ownedCharacters = ownedCharacters;
-    }
-
-    public void setSelectedCharacters(String[] selectedCharacters) {
-        this.selectedCharacters = selectedCharacters;
     }
 }
