@@ -8,8 +8,7 @@ public class Team {
     private List<Team> teams;
 
     // getters
-    public List<Character> getCharacters() {
-        return playerCharacters;
+    public List<Character> getCharacters() {return playerCharacters;
     }
 
     public List<Team> getTeams() {
