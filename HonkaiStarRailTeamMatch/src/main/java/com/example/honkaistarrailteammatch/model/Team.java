@@ -1,33 +1,27 @@
 package com.example.honkaistarrailteammatch.model;
 
+
+import java.util.List;
+
 public class Team {
-    private String playerSelectedCharacters;
-    private String generatedTeam;
-    private String teamExplaination;
+    private List<Character> playerCharacters;
+    private List<Team> teams;
 
     // getters
-    public String getPlayerSelectedCharacters() {
-        return playerSelectedCharacters;
+    public List<Character> getCharacters() {
+        return playerCharacters;
     }
 
-    public String getGeneratedTeam() {
-        return generatedTeam;
-    }
-
-    public  String getTeamExplaination() {
-        return teamExplaination;
+    public List<Team> getTeams() {
+        return teams;
     }
 
     // setters
-    public void setTeamExplaination(String teamExplaination) {
-        this.teamExplaination = teamExplaination;
+    public void setCharacters(List<Character> characters) {
+        this.playerCharacters = characters;
     }
-
-    public void setPlayerSelectedCharacters(String playerSelectedCharacters) {
-        this.playerSelectedCharacters = playerSelectedCharacters;
-    }
-
-    public void setGeneratedTeam(String generatedTeam) {
-        this.generatedTeam = generatedTeam;
+    
+    public void setTeams(List<Team> teams) {
+        this.teams = teams;
     }
 }

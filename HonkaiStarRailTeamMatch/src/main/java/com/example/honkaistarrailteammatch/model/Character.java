@@ -4,6 +4,7 @@ public class Character {
     private String characterName;
     private String characterPath;
     private String characterElement;
+    private int characterRarity;
 
     // getters
     public String getCharacterName() {
@@ -18,6 +19,10 @@ public class Character {
         return characterElement;
     }
 
+    public int getRarity() {
+        return characterRarity;
+    }
+
     // setters
     public void setCharacterName(String characterName) {
         this.characterName = characterName;
@@ -29,5 +34,9 @@ public class Character {
 
     public void setCharacterElement(String characterElement) {
         this.characterElement = characterElement;
+    }
+
+    public void setCharacterRarity(int characterRarity) {
+        this.characterRarity = characterRarity;
     }
 }
