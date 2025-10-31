@@ -12,32 +12,67 @@
     <form id="signUp">
         <div class="form-group">
             <label for="uemail">Email</label>
-            <input type="email" id="email-input" placeholder="email" required>
+            <input type="email" id="email-input" placeholder="email">
         </div>
         <div class="form-group">
             <label for="uname">Username</label>
-            <input type="text" id="username-input" placeholder="username" required>
+            <input type="text" id="username-input" placeholder="username">
         </div>
         <div class="form-group">
             <label for="upassword">Password</label>
-            <input type="text" id="password-input" placeholder="password" required>
+            <input type="password" id="password-input" placeholder="password">
         </div>
         <div class="form-group">
             <label for="upassword">Confirm Password</label>
-            <input type="text" id="confirm-password-input" placeholder="password" required>
+            <input type="password" id="confirm-password-input" placeholder="password">
         </div>
         <button type="submit">Sign Up</button>
     </form>
-
+    <p>Already have an account? <a href="login.html">Login</a>
+    </p>
     <!-- Script code -->
     <script>
         const form = document.getElementById('signUp');
-        const emailInput = document.getElementById('email-input');
-        const usernameInput = document.getElementById('username-input');
-        const passwordInput = document.getElementById('password-input');
-        const confirmPasswordInput = document.getElementById('confirm-password-input');
+        const email = document.getElementById('email-input');
+        const username = document.getElementById('username-input');
+        const password = document.getElementById('password-input');
+        const confirmPassword = document.getElementById('confirm-password-input');
 
-        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // ensuring no fields are empty
+            if(!email || !username || !password || !confirmPassword) {
+                alert("All fields are required");
+            }
+
+            // ensuring password is appropiate length
+            if(password.value.length < 8) {
+                alert("Password must be at least 8 characters long.");
+                return;
+            }
+
+            // ensuring the passwords match
+            if(password.value !== confirmPassword.value) {
+                alert("Passwords do not match.");
+                return;
+            }
+
+            // saving user to local storage
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            users.push({ 
+                email: email.value, 
+                username: username.value,
+                password: password.value });
+            localStorage.setItem('users', JSON.stringify(users));
+
+            alert("Successfully signed up");
+
+            // redirects to the homepage
+            setTimeout(() => {
+                window.location.href = 'homepage.html';
+            }, 1000);
+        });
     </script>
 </body>
 </html>

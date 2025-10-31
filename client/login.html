@@ -9,14 +9,48 @@
     <form id="login">
         <div class="form-group">
             <label for="uemail">Email</label>
-            <input type="email" placeholder="email" required>
+            <input type="email" id="email-input" placeholder="email" required>
         </div>
         <div class="form-group">
-            <label for="uname">Username</label>
-            <input type="text" placeholder="password" required>
+            <label for="uname">Password</label>
+            <input type="password" id="password-input" placeholder="password" required>
         </div>
+        
         <button type="submit">Login</button>
     </form>
-    <p>Don't have an account?</p><a href="signup.html">Sign Up</a>
+    <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+
+    <!-- Script code -->
+    <script>
+        const form = document.getElementById('login');
+        const email = document.getElementById('email-input');
+        const password = document.getElementById('password-input');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // ensuring no fields are empty
+            if(!email.value || !password.value) {
+                alert("All fields are required");
+            }
+
+            // getting and matching user from local storage
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const user = users.find(u => u.email === email.value && u.password === password.value);
+
+            if(user) {
+                localStorage.setItem("loggedInUser", JSON.stringify(user));
+                alert("Success login");
+
+                // redirects to the homepage
+                setTimeout(() => {
+                window.location.href = 'homepage.html';
+                }, 1000);
+            } else {
+                alert("Invalid email or password");
+            }
+
+        });
+    </script>
 </body>
 </html>
