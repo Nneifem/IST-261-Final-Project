@@ -1,3 +1,46 @@
+/* Font and Background */
+
+/* Sign Up and Login*/
+.title {
+    margin: 15px;
+    text-align: center;
+}
+
+#signUp, #login {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sign-up-button, .login-button {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    border: solid black 1px;
+    border-radius: 10px;
+}
+
+.login-link, .sign-up-link {
+    margin: 15px;
+    text-align: center;
+}
+
+#email-input, #username-input, #password-input, #confirm-password-input {
+    border: solid grey 1px;
+    border-radius: 4px;
+}
+
+
+/* Homepage */
+.sub-title {
+    margin: 25px;
+}
+
 img {
     width: 75px;
+}
+
+#destruction, #the-hunt, #erudition, #harmony, #nihility, #preservation, #abundance, #remembrance {
+    margin: 25px;
 }
