@@ -1,26 +1,30 @@
 package com.example.honkaistarrailteammatch.model;
 
 
+import jakarta.persistence.*;
 import java.util.List;
 
+@Entity
+@Table(name = "team")
+
 public class Team {
-    private List<Character> playerCharacters;
-    private List<Team> teams;
 
-    // getters
-    public List<Character> getCharacters() {return playerCharacters;
-    }
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String teamName;
 
-    public List<Team> getTeams() {
-        return teams;
-    }
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "generated_team",
+            joinColumns = @JoinColumn(name = "team_id"),
+            inverseJoinColumns = @JoinColumn(name = "character_name")
+    )
 
-    // setters
-    public void setCharacters(List<Character> characters) {
-        this.playerCharacters = characters;
-    }
+    private List<Character> characters;
 
-    public void setTeams(List<Team> teams) {
-        this.teams = teams;
-    }
+    @ManyToOne
+    @JoinColumn(name = "username")
+    private Player player;
+
 }
