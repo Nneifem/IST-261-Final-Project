@@ -14,7 +14,7 @@ public class Team {
     private Long teamId;
 
     private String teamName;
-    private String teamDescription;
+    private String teamExplanation;
 
     // storing generated team to the player
     @ManyToOne
@@ -41,8 +41,8 @@ public class Team {
         return teamName;
     }
 
-    public String getTeamDescription() {
-        return teamDescription;
+    public String getTeamExplanation() {
+        return teamExplanation;
     }
 
     public Player getPlayer() {
@@ -62,8 +62,8 @@ public class Team {
         this.teamName = teamName;
     }
 
-    public void setTeamDescription(String teamDescription) {
-        this.teamDescription = teamDescription;
+    public  void setTeamExplanation(String teamExplanation) {
+        this.teamExplanation = teamExplanation;
     }
 
     public void setPlayer(Player player) {
