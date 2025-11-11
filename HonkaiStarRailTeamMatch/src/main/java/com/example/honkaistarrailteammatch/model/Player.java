@@ -19,6 +19,7 @@ public class Player {
     @OneToMany(mappedBy = "player", cascade = CascadeType.ALL)
     private List<Team> generatedTeams;
 
+    // storing characters the player owns
     @ManyToMany
     @JoinTable(
             name = "owned_characters",

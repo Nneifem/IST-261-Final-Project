@@ -16,6 +16,13 @@ public class Team {
     private String teamName;
     private String teamDescription;
 
+    // storing generated team to the player
+    @ManyToOne
+    @JoinColumn(name = "player_id")
+    private Player player;
+
+
+    // same character can be in multiple teams
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "generated_team",
@@ -24,13 +31,46 @@ public class Team {
     )
     private List<Character> characters;
 
-    @ManyToOne
-    @JoinColumn(name = "username")
-    private Player player;
 
     // getters
-    public Long
+    public Long getTeamId() {
+        return teamId;
+    }
+
+    public String getTeamName() {
+        return teamName;
+    }
+
+    public String getTeamDescription() {
+        return teamDescription;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public List<Character> getCharacters() {
+        return characters;
+    }
 
     // setters
+    public void setTeamId(Long teamId) {
+        this.teamId = teamId;
+    }
 
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
+    }
+
+    public void setTeamDescription(String teamDescription) {
+        this.teamDescription = teamDescription;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public void setCharacters(List<Character> characters) {
+        this.characters = characters;
+    }
 }
