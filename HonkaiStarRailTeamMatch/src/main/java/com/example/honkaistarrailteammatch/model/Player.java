@@ -1,13 +1,31 @@
 package com.example.honkaistarrailteammatch.model;
 
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.*;
+
 import java.util.List;
 
+@Entity
+@Table(name = "player")
 public class Player {
+
+    @Id
     private String username;
+
     private String email;
+    private String password;
+
+    @OneToMany(mappedBy = "player", cascade = CascadeType.ALL)
+    private List<Team> generatedTeams;
+
+    @ManyToMany
+    @JoinTable(
+            name = "owned_characters",
+            joinColumns = @JoinColumn(name = "username"),
+            inverseJoinColumns = @JoinColumn(name = "character_name")
+    )
     private List<Character> ownedCharacters;
-    private List<Team> generatedTeam;
 
     // getters
     public String getUsername() {
@@ -18,12 +36,16 @@ public class Player {
         return email;
     }
 
-    public List<Character> getOwnedCharacters() {
-        return ownedCharacters;
+    public String getPassword() {
+        return password;
     }
 
-    public List<Team> getGeneratedTeam() {
-        return generatedTeam;
+    public List<Team> getGeneratedTeams() {
+        return generatedTeams;
+    }
+
+    public List<Character> getOwnedCharacters() {
+        return ownedCharacters;
     }
 
     // setters
@@ -35,11 +57,15 @@ public class Player {
         this.email = email;
     }
 
-    public void setOwnedCharacters(List<Character> ownedCharacters) {
-        this.ownedCharacters = ownedCharacters;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public void setGeneratedTeam(List<Team> generatedTeam) {
-        this.generatedTeam = generatedTeam;
+    public void setGeneratedTeams(List<Team> generatedTeams) {
+        this.generatedTeams = generatedTeams;
+    }
+
+    public void setOwnedCharacters(List<Character> ownedCharacters) {
+        this.ownedCharacters = ownedCharacters;
     }
 }
