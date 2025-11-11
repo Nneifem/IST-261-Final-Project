@@ -1,4 +1,7 @@
 package com.example.honkaistarrailteammatch.repository;
 
-public class CharacterRepository {
+import com.example.honkaistarrailteammatch.model.Character;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CharacterRepository extends JpaRepository<Character, String> {
 }
