@@ -4,6 +4,7 @@ import com.example.honkaistarrailteammatch.model.Character;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.example.honkaistarrailteammatch.repository.CharacterRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
@@ -19,28 +20,35 @@ public class CharacterService {
     private CharacterRepository characterRepository;
 
     private final ObjectMapper objectMapper = new ObjectMapper();
-    public List<Character> loadCharactersFromJson() throws IOException {
+
+    @PostConstruct
+    public void init(){
+        if (characterRepository.count() == 0) {
+            saveCharacterFromJson();
+        }
+    }
+
+    public void saveCharacterFromJson() {
         try {
             // loading the file
             InputStream inputStream = new ClassPathResource("hsr_characters.json").getInputStream();
-
-            // converting JSON file into List<Character>
             List<Character> characters = objectMapper.readValue(
                     inputStream,
                     new TypeReference<List<Character>>() {}
             );
-            return characters;
+
+            // checking for any new characters added into the database
+            for (Character character : characters) {
+                if (!characterRepository.existsById(character.getCharacterName())) {
+                    characterRepository.save(character);
+                }
+            }
+            System.out.println("Character has been saved successfully");
         } catch (IOException e) {
-            throw new IOException(e);
+            throw new RuntimeException(e);
         }
     }
 
-    // saving all the characters in the database
-    public void savedCharactersFromJson() throws IOException {
-        List<Character> savedCharacters = loadCharactersFromJson();
-        characterRepository.saveAll(savedCharacters);
-    }
-    
     // getting all the characters
     public List<Character> getAllCharacters() {
         return characterRepository.findAll();
