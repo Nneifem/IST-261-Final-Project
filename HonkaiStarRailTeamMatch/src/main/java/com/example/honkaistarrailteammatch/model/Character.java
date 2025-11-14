@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "character")
+@Table(name = "hsr_character")
 public class Character {
 
     @Id
@@ -14,13 +14,14 @@ public class Character {
     private String characterPath;
     private String characterElement;
     private int characterRarity;
+    private String img;
 
     // multiple characters to multiple teams
     @ManyToMany(mappedBy = "characters")
     private List<Team> teams;
 
     // multiple characters to one player
-    @ManyToMany(mappedBy = "owned_characters")
+    @ManyToMany(mappedBy = "ownedCharacters")
     private List<Player> players;
 
 
@@ -39,6 +40,10 @@ public class Character {
 
     public int getCharacterRarity() {
         return characterRarity;
+    }
+
+    public String getImg() {
+        return img;
     }
 
     public List<Team> getTeams() {
@@ -64,6 +69,10 @@ public class Character {
 
     public void setCharacterRarity(int characterRarity) {
         this.characterRarity = characterRarity;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public void setTeams(List<Team> teams) {
