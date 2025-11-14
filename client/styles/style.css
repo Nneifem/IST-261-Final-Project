@@ -4,38 +4,30 @@
 }
 
 /* Sign Up and Login*/
-.title {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 30px;
-    text-align: center;
+
+.card-title {
+    padding: 30px;
 }
 
-#signUp, #login {
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+button.btn.btn-primary {
+    margin-top: 10px;
+    background-color: lightcoral;
+    border: 0px;
 }
 
-.sign-up-button, .login-button {
-    width: 15%;
-    display: flex;
-    justify-content: center;
-    border: solid black 1px;
-    border-radius: 10px;
+.login-link a {
+    color: lightcoral;
 }
 
 .login-link, .sign-up-link {
-    margin: 15px;
-    text-align: center;
+    padding-top: 10px;
 }
 
-#email-input, #username-input, #password-input, #confirm-password-input {
-    border: solid grey 1px;
-    border-radius: 4px;
+.sign-up-link a {
+    color: lightcoral;
 }
 
-
+.sign-
 /* Homepage */
 .sub-title {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

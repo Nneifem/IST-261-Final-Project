@@ -7,71 +7,83 @@
 </head>
 <body>
     <!-- Sign up Form -->
-    <h1 class="title">Sign up</h1>
-    <form id="signUp">
-        <div class="form-group">
-            <label for="uemail">Email</label>
-            <input type="email" id="email-input" placeholder="email">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <form id="signUp">
+                    <h1 class="card-title text-center mb-4">Sign up</h1>
+                    <div class="form-group">
+                        <label for="uemail">Email</label>
+                        <input type="email" class="form-control" id="email-input" placeholder="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="uname">Username</label>
+                        <input type="text" class="form-control" id="username-input" placeholder="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="upassword">Password</label>
+                        <input type="password" class="form-control" id="password-input" placeholder="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="upassword">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirm-password-input" placeholder="password" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+                <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
+         </div>
         </div>
-        <div class="form-group">
-            <label for="uname">Username</label>
-            <input type="text" id="username-input" placeholder="username">
-        </div>
-        <div class="form-group">
-            <label for="upassword">Password</label>
-            <input type="password" id="password-input" placeholder="password">
-        </div>
-        <div class="form-group">
-            <label for="upassword">Confirm Password</label>
-            <input type="password" id="confirm-password-input" placeholder="password">
-        </div>
-        <button type="submit" class="sign-up-button">Sign Up</button>
-    </form>
-    <p class="login-link">Already have an account? <a href="login.html">Login</a>
-    </p>
+    </div>
 
     <!-- Script code -->
     <script>
-        const form = document.getElementById('signUp');
-        const email = document.getElementById('email-input');
-        const username = document.getElementById('username-input');
-        const password = document.getElementById('password-input');
-        const confirmPassword = document.getElementById('confirm-password-input');
+        const SIGNUP_URL = 'http://localhost:8080/api/players/signup';
 
-        form.addEventListener('submit', function(e) {
+        document.getElementById("signUp").addEventListener("submit", async function(e) {
             e.preventDefault();
 
-            // ensuring no fields are empty
-            if(!email || !username || !password || !confirmPassword) {
-                alert("All fields are required");
-            }
+            const email = document.getElementById('email-input');
+            const username = document.getElementById('username-input');
+            const password = document.getElementById('password-input');
+            const confirmPassword = document.getElementById('confirm-password-input');
 
-            // ensuring password is appropiate length
-            if(password.value.length < 8) {
+            // making sure the password is longer than 8 characters
+            if (password.value.length < 8) {
                 alert("Password must be at least 8 characters long.");
                 return;
             }
-
-            // ensuring the passwords match
-            if(password.value !== confirmPassword.value) {
-                alert("Passwords do not match.");
+            
+            // confirming the passwords match
+            if (password.value !== confirmPassword.value) {
+                alert("Passwords do not match!");
                 return;
             }
 
-            // saving user to local storage
-            const users = JSON.parse(localStorage.getItem('users')) || [];
-            users.push({ 
-                email: email.value, 
-                username: username.value,
-                password: password.value });
-            localStorage.setItem('users', JSON.stringify(users));
+            const playerData = {
+                username: username.value, 
+                email: email.value,
+                password: password.value
+            };
 
-            alert("Successfully signed up");
-
-            // redirects to the homepage
-            setTimeout(() => {
-                window.location.href = 'homepage.html';
-            }, 1000);
+            try {
+                const response = await fetch(SIGNUP_URL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(playerData)
+                });
+                if (response.ok) {
+                    alert("Account created successfully!");
+                    window.location.href = 'homepage.html';
+                } 
+                else {
+                    alert("Signup failed, please try again.");
+                }
+            } catch (error) {
+                console.error(error);
+            }
         });
     </script>
 </body>
