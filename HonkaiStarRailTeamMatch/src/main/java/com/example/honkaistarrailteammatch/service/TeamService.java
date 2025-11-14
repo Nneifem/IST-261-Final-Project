@@ -27,13 +27,13 @@ public class TeamService {
         Player player = playerRepository.findById(username).orElseThrow(() -> new RuntimeException("Player Not Found"));
 
         // getting the characters the user selected
-        List<Character> characters = characterRepository.findAllById(selectedCharacters);
+        List<Character> selectCharacters = player.getOwnedCharacters();
 
         Team team = new Team();
         team.setPlayer(player);
         team.setTeamName(player.getUsername() + "'s Generated Team");
-        team.setCharacters(characters);
-        team.setTeamExplanation(generateExplanation(characters));
+        team.setCharacters(selectCharacters);
+        team.setTeamExplanation(generateExplanation(selectCharacters));
 
         return teamRepository.save(team);
     }

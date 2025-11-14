@@ -137,14 +137,14 @@
     "characterPath": "Destruction",
     "characterElement": "Imaginary",
     "characterRarity": 5,
-    "img": "http://localhost:8080/images/Dan_Heng_Imbibitor_Lunae.jpg"
+    "img": "http://localhost:8080/images/Imbibitor_Lunae.jpg"
   },
   {
     "characterName": "Dan Heng: Permansor Terrae",
     "characterPath": "Preservation",
     "characterElement": "Physical",
     "characterRarity": 5,
-    "img": "http://localhost:8080/images/Dan_Heng_Permansor_Terrae.jpg"
+    "img": "http://localhost:8080/images/Permansor_Terrae.jpg"
   },
   {
     "characterName": "Dr. Ratio",
@@ -333,7 +333,7 @@
     "characterPath": "Hunt",
     "characterElement": "Imaginary",
     "characterRarity": 4,
-    "img": "http://localhost:8080/images/March_7th_The_Hunt.jpg"
+    "img": "http://localhost:8080/images/March7th_Hunt.jpg"
   },
   {
     "characterName": "Misha",
@@ -487,28 +487,28 @@
     "characterPath": "Remembrance",
     "characterElement": "Ice",
     "characterRarity": 5,
-    "img": "http://localhost:8080/images/Trailblazer_Remembrance.jpg"
+    "img": "http://localhost:8080/images/TrailblazerRemembrance.jpg"
   },
   {
     "characterName": "Trailblazer",
     "characterPath": "Destruction",
     "characterElement": "Physical",
     "characterRarity": 5,
-    "img": "http://localhost:8080/images/Trailblazer_The_Destruction.jpg"
+    "img": "http://localhost:8080/images/TrailblazerDestruction.jpg"
   },
   {
     "characterName": "Trailblazer: Imaginary",
     "characterPath": "Harmony",
     "characterElement": "Imaginary",
     "characterRarity": 5,
-    "img": "http://localhost:8080/images/Trailblazer_The_Harmony.jpg"
+    "img": "http://localhost:8080/images/TrailblazerHarmony.jpg"
   },
   {
     "characterName": "Trailblazer: Preservation",
     "characterPath": "Preservation",
     "characterElement": "Fire",
     "characterRarity": 5,
-    "img": "http://localhost:8080/images/Trailblazer_The_Preservation.jpg"
+    "img": "http://localhost:8080/images/TrailblazerPreservation.jpg"
   },
   {
     "characterName": "Tribbie",

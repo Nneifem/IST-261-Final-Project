@@ -35,20 +35,9 @@ button.btn.btn-primary {
 }
 
 img {
-    width: 75px;
-    padding-bottom: 5px;
+    width: 150px;
 }
 
-#destruction, #the-hunt, #erudition, #harmony, #nihility, #preservation, #abundance, #remembrance {
-    margin: 25px;
-}
-
-.submit-button {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin: 20px;
-    width: 15%;
-    border: solid black 1px;
-    border-radius: 10px;
+#characters-container {
+    margin: 35px;
 }

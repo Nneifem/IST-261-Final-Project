@@ -61,7 +61,10 @@
 
                 const data = await response.json();
                 alert("Login successful!");
+                // saving to local storage
+                localStorage.setItem('currentUsername', username.value);
                 window.location.href = 'homepage.html';
+
             } catch (error) {
                 console.error(error);
             }

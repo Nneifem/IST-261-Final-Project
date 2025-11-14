@@ -16,7 +16,7 @@ public class CharacterController {
     private CharacterService characterService;
 
     // getting all the characters
-    @GetMapping
+    @GetMapping("/sync")
     public List<Character> getAllCharacters() {
         return characterService.getAllCharacters();
     }

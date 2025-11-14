@@ -8,121 +8,72 @@
 <body>
     <h1 class="title">Honkai Star Rail Team Match</h1>
     <h3 class="sub-title">Select the characters you own:</h3>
-    <section id="destruction">
-        <h5>Destruction</h5>
-        <img src="images/Arlan.jpg">
-        <img src="images/Blade.jpg">
-        <img src="images/Clara.jpg">
-        <img src="images/Dan Heng Imbibitor Lunae.jpg">
-        <img src="images/Firefly.jpg">
-        <img src="images/Hook.jpg">
-        <img src="images/Jingliu.jpg">
-        <img src="images/Misha.jpg">
-        <img src="images/Mydei.jpg">
-        <img src="images/Phainon.jpg">
-        <img src="images/Saber.jpg">
-        <img src="images/Trailblazer - The Destruction.jpg">
-        <img src="images/Xueyi.jpg">
-        <img src="images/Yunli.jpg">
-    </section>
 
-    <section id="the-hunt">
-        <h5>The Hunt</h5>
-        <img src="images/Archer.jpg">
-        <img src="images/Boothill.jpg">
-        <img src="images/Dan Heng.jpg">
-        <img src="images/Dr. Ratio.jpg">
-        <img src="images/Feixiao.jpg">
-        <img src="images/March 7th- The Hunt.jpg">
-        <img src="images/Moze.jpg">
-        <img src="images/Seele.jpg">
-        <img src="images/Sushang.jpg">
-        <img src="images/Topaz and Numby.jpg">
-        <img src="images/Yanqing.jpg">
-    </section>
+    <div class="container">
+        <div id="characters-container" class="row justtify-content-center"></div>
+    </div>
 
-    <section id="erudition">
-        <h4>Erudition</h4>
-        <img src="images/Anaxa.jpg">
-        <img src="images/Argenti.jpg">
-        <img src="images/Herta.jpg">
-        <img src="images/Himeko.jpg">
-        <img src="images/Jade.jpg">
-        <img src="images/Jing Yuan.jpg">
-        <img src="images/Qingque.jpg">
-        <img src="images/Rappa.jpg">
-        <img src="images/Serval.jpg">
-        <img src="images/The Herta.jpg">
-    </section>
+    <div id="generated-team">
+        <h4>Generated Team:</h4>
+        <div id="team-cards" class="row"></div>
+    </div>
 
-    <section id="harmony">
-        <h5>Harmony</h5>
-        <img src="images/Asta.jpg">
-        <img src="images/Bronya.jpg">
-        <img src="images/Cerydra.jpg">
-        <img src="images/Hanya.jpg">
-        <img src="images/Robin.jpg">
-        <img src="images/Ruan Mei.jpg">
-        <img src="images/Sparkle.jpg">
-        <img src="images/Sunday.jpg">
-        <img src="images/Tingyun.jpg">
-        <img src="images/Trailblazer - The Harmony.jpg">
-        <img src="images/Tribbie.jpg">
-        <img src="images/Yukong.jpg">
-    </section>
-
-    <section id="nihility">
-        <h5>Nihility</h5>
-        <img src="images/Acheron.jpg">
-        <img src="images/Black Swan.jpg">
-        <img src="images/Cipher.jpg">
-        <img src="images/Fugue.jpg">
-        <img src="images/Guinaifen.jpg">
-        <img src="images/Hysilens.jpg">
-        <img src="images/Jiaoqiu.jpg">
-        <img src="images/Kafka.jpg">
-        <img src="images/Luka.jpg">
-        <img src="images/Pela.jpg">
-        <img src="images/Sampo.jpg">
-        <img src="images/Silver Wolf.jpg">
-        <img src="images/Welt.jpg">
-    </section>
-
-    <section id="preservation">
-        <h5>Preservation</h5>
-        <img src="images/Aventurine.jpg">
-        <img src="images/Dan Heng Permansor Terrae.jpg">
-        <img src="images/Fu Xuan.jpg">
-        <img src="images/Gepard.jpg">
-        <img src="images/March 7th.jpg">
-        <img src="images/Trailblazer - The Preservation.jpg">
-    </section>
-    
-    <section id="abundance">
-        <h4>Abundance</h4>
-        <img src="images/Bailu.jpg">
-        <img src="images/Gallagher.jpg">
-        <img src="images/Huohuo.jpg">
-        <img src="images/Lingsha.jpg">
-        <img src="images/Luocha.jpg">
-        <img src="images/Lynx.jpg">
-        <img src="images/Natasha.jpg">
-    </section>
-    
-    <section id="remembrance">
-        <h5>Remembrance</h5>
-        <img src="images/Aglaea.jpg">
-        <img src="images/Castorice.jpg">
-        <img src="images/Cyrene.jpg">
-        <img src="images/Evernight.jpg">
-        <img src="images/Hyacine.jpg">
-        <img src="images/Trailblazer - Remembrance.jpg">
-    </section>
-
-    <button type="submit" class="submit-button">Submit</button>
+    <button id="submit-btn" type="submit" class="btn btn-primary">Submit</button>
 
     
     <!-- Script code -->
+    <script>
+        const CHARACTER_URL = 'http://localhost:8080/api/characters/sync';
+        const selectCharacters = new Set();
+        const currentUsername = localStorage.getItem('currentUsername');
+
+        const characterList = document.getElementById('characters-container')
+
+        // loading the characters
+        async function loadCharacters() {
+            try {
+                const response = await fetch(CHARACTER_URL);
+                if (!response.ok) throw new Error("Failed to load characters.");
+                const characters = await response.json();
+                characterList.innerHTML = '';
+
+                characters.forEach(char => {
+                    const charDiv = document.createElement('div');
+                    charDiv.classList.add('col-sm-3');
+
+                    charDiv.innerHTML = `
+                        <div class="card character-card h-100">
+                            <img class="card-img-top" src="images/${char.characterName}.jpg">
+                            <div class="card-body">
+                                <h5>${char.characterName}</h5>
+                                <p>Path: ${char.characterPath}</p>
+                                <p>Element: ${char.characterElement}</p>
+                                <p>Rarity: ${char.characterRarity}</p>
+                            </div>
+                        </div>
+                    `;
+
+                    const cardElement = charDiv.querySelector('.card');
+                    cardElement.addEventListener('click', () => {
+                        if (selectCharacters.has(char.characterName)) {
+                            selectCharacters.delete(char.characterName);
+                            cardElement.classList.remove('selected');
+                        } else {
+                            selectCharacters.add(char.characterName);
+                            cardElement.classList.add('selected');
+                        }
+                    });
+
+                    characterList.appendChild(charDiv);
+                });
+            } catch (error) {
+                console.error(error);
+                alert("Error loading characters");
+            }
+        }
+        document.addEventListener('DOMContentLoaded', loadCharacters);
+
+    </script>
 
 </body>
 </html>
