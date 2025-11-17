@@ -42,14 +42,14 @@
                     charDiv.classList.add('col-sm-3');
 
                     charDiv.innerHTML = `
-                        <div class="card character-card h-100">
+                        <div class="card character-card">
+                            <button class="character-button">
                             <img class="card-img-top" src="images/${char.characterName}.jpg">
-                            <div class="card-body">
                                 <h5>${char.characterName}</h5>
                                 <p>Path: ${char.characterPath}</p>
                                 <p>Element: ${char.characterElement}</p>
                                 <p>Rarity: ${char.characterRarity}</p>
-                            </div>
+                            </button>
                         </div>
                     `;
 

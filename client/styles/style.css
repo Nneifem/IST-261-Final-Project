@@ -38,6 +38,10 @@ img {
     width: 150px;
 }
 
-#characters-container {
-    margin: 35px;
+.character-card {
+    margin-bottom: 38px;
+}
+
+.character-button {
+    margin-bottom: 40px;
 }
