@@ -18,9 +18,7 @@ public class TeamController {
 
     // displaying all the generated team the user has
     @PostMapping("/generate/{username}")
-    public Team generateTeam(
-            @PathVariable String username,
-            @RequestBody List<String> selectedCharacterNames
+    public Team generateTeam(@PathVariable String username, @RequestBody List<String> selectedCharacterNames
     ) {
         return teamService.generateTeam(username, selectedCharacterNames);
     }

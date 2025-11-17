@@ -16,7 +16,8 @@ import java.util.Optional;
 public class PlayerService {
 
     @Autowired
-    PlayerRepository playerRepository;
+    private PlayerRepository playerRepository;
+    @Autowired
     private CharacterRepository characterRepository;
 
     // saving user's account

@@ -1,6 +1,7 @@
 package com.example.honkaistarrailteammatch.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.*;
 
@@ -17,6 +18,7 @@ public class Player {
     private String password;
 
     @OneToMany(mappedBy = "player", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Team> generatedTeams;
 
     // storing characters the player owns
@@ -26,6 +28,7 @@ public class Player {
             joinColumns = @JoinColumn(name = "username"),
             inverseJoinColumns = @JoinColumn(name = "character_name")
     )
+    @JsonIgnore
     private List<Character> ownedCharacters;
 
     // getters

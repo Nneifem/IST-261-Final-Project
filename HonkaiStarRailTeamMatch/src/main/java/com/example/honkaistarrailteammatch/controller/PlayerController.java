@@ -31,8 +31,8 @@ public class PlayerController {
     }
 
     @PostMapping("/login")
-        public Optional<Player> login(@RequestBody Player player) {
-            return playerService.loginPlayer(player.getUsername(), player.getPassword());
+    public Optional<Player> login(@RequestBody Player player) {
+        return playerService.loginPlayer(player.getUsername(), player.getPassword());
     }
 
     @GetMapping("/{username}")
@@ -41,18 +41,14 @@ public class PlayerController {
     }
 
     @PostMapping("/{username}/characters")
-    public ResponseEntity<String> savePlayerCharacters
-            (@PathVariable String username,
-             @RequestBody Map<String, List<String>> payload) {
-            List<String> characterNames = payload.get("characters");
-            playerService.savePlayerCharacters(username, characterNames);
-            return ResponseEntity.ok().build();
+    public ResponseEntity<String> savePlayerCharacters (@PathVariable String username, @RequestBody Map<String, List<String>> payload) {
+        List<String> characterNames = payload.get("characters");
+        playerService.savePlayerCharacters(username, characterNames);
+        return ResponseEntity.ok().build();
     }
 
     @GetMapping("/{username}/generateTeam")
-    public Team generateTeam(
-            @PathVariable String username,
-            @RequestParam List<String> characterNames){
+    public Team generateTeam(@PathVariable String username, @RequestParam List<String> characterNames){
         return teamService.generateTeam(username, characterNames);
     }
 }

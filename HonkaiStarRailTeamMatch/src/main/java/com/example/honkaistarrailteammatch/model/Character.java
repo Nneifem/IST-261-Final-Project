@@ -1,5 +1,6 @@
 package com.example.honkaistarrailteammatch.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -18,10 +19,12 @@ public class Character {
 
     // multiple characters to multiple teams
     @ManyToMany(mappedBy = "characters")
+    @JsonIgnore
     private List<Team> teams;
 
     // multiple characters to one player
     @ManyToMany(mappedBy = "ownedCharacters")
+    @JsonIgnore
     private List<Player> players;
 
 
