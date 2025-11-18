@@ -26,7 +26,7 @@ public class Team {
 
 
     // same character can be in multiple teams
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
             name = "generated_team",
             joinColumns = @JoinColumn(name = "team_id"),

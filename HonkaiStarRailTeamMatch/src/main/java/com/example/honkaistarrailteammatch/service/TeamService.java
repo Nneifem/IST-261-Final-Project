@@ -26,12 +26,6 @@ public class TeamService {
     public Team generateTeam(String username, List<String> selectedCharacters) {
         Player player = playerRepository.findById(username).orElseThrow(() -> new RuntimeException("Player Not Found"));
 
-        // deleting old teams
-        List<Team> oldTeams = teamRepository.findByPlayerUsername(username);
-        if (!oldTeams.isEmpty()) {
-            teamRepository.deleteAll(oldTeams);
-        }
-
         // getting the characters the user selected
         List<Character> selectCharacters = characterRepository.findByCharacterNameIn(selectedCharacters);
 
@@ -56,5 +50,17 @@ public class TeamService {
 
     public List<Team> getTeamsByUsername(String username) {
         return teamRepository.findByPlayerUsername(username);
+    }
+
+    // delete generated team
+    public void deleteTeam(Long teamId) {
+        Team team = teamRepository.findById(teamId).orElseThrow(() -> new RuntimeException("Team Not Found"));
+
+       Player player = team.getPlayer();
+       if (player != null) {
+           player.getGeneratedTeams().remove(team);
+           playerRepository.save(player);
+       }
+       teamRepository.delete(team);
     }
 }

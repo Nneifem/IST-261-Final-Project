@@ -97,7 +97,7 @@
                             const response = await fetch(`${SAVE_TEAM_URL}/${username}`, {
                                 method: "POST",
                                 headers: {"Content-Type": "application/json"},
-                                body: JSON.stringify({characters: teamNames})
+                                body: JSON.stringify(teamNames)
                             });
 
                             if(!response.ok) throw new Error("Failed to save team.");

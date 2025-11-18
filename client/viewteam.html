@@ -30,9 +30,15 @@
                 }
 
                 teams.forEach(team => {
-                    const teamTitle = document.createElement("h3");
-                    teamTitle.textContent = team.teamName;
-                    saved.appendChild(teamTitle);
+                    const teamDiv = document.createElement("div");
+                    teamDiv.classList.add("team-container");
+                    
+                    const teamHeader = document.createElement("div");
+                    teamHeader.innerHTML = `
+                        <h3 class="player-team-name">${team.teamName}</h3>
+                        <button class="btn btn-danger btn-sm delete-btn">Delete Team</button>
+                    `;
+                    teamDiv.appendChild(teamHeader);
 
                     team.characters.forEach(char => {
                         const charDiv = document.createElement("div");
@@ -46,8 +52,26 @@
                                 <p>Rarity: ${char.characterRarity}</p>
                             </div>
                         `;
-                        saved.appendChild(charDiv);
+                        teamDiv.appendChild(charDiv);
                     });
+                    saved.appendChild(teamDiv);
+
+                    const deleteButton = teamHeader.querySelector(".delete-btn");
+                    deleteButton.addEventListener("click", async () => {
+                        if (confirm(`Are you sure you want to delete ${team.teamName}`)) {
+                            try {
+                                const delResponse = await fetch(`http://localhost:8080/api/teams/${team.teamId}`, {method: "DELETE"});
+                                if (delResponse.status === 204) {
+                                    alert("Team deleted successfully!");
+                                    loadTeam();
+                                } else {
+                                    alert("Failed to delete team")
+                                }
+                            } catch (err) {
+                                console.error(err);
+                            }
+                        }
+                    })
                 });
                 } catch (error) {
                     console.error(error);
@@ -58,3 +82,12 @@
     </script>
 </body>
 </html>
+
+<!--
+    const teamHeader = document.createElement("div");
+                    teamHeader.innerHTML = `
+                        <h3>${team.teamName}</h3>
+                        <button class="btn btn-danger btn-sm delete-btn">Delete Team</button>
+                    `;
+                    teamDiv.appendChild(teamHeader);
+-->

@@ -4,6 +4,7 @@ package com.example.honkaistarrailteammatch.controller;
 import com.example.honkaistarrailteammatch.model.Team;
 import com.example.honkaistarrailteammatch.service.TeamService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -33,5 +34,12 @@ public class TeamController {
     @GetMapping("/{id}")
     public Team getTeam(@PathVariable Long id) {
         return teamService.getTeam(id);
+    }
+
+    // delete generated team
+    @DeleteMapping("/{teadId}")
+    public ResponseEntity<Void> deleteTeam(@PathVariable Long teadId) {
+        teamService.deleteTeam(teadId);
+        return ResponseEntity.noContent().build();
     }
 }
