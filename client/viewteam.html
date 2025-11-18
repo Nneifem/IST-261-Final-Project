@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Character list</title>
+</head>
+<body>
+    <h1>Saved team</h1>
+    <div id="saved-team"></div>
+
+    
+    <!-- Script code -->
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get("username");
+        const saved = document.getElementById("saved-team");
+
+        async function loadTeam() {
+            try {
+                const response = await fetch(`http://localhost:8080/api/players/${username}/teams`);
+                if (!response.ok) throw new Error("Failed to load teams");
+
+                const teams = await response.json();
+                saved.innerHTML = "";
+
+                if (teams.length === 0) {
+                    saved.innerHTML = `<p>No teams have been generated. Go select characters<br><a href='homepage.html?username=${encodeURIComponent(username)}'>Pick your characters</a></p>`;
+                    return;
+                }
+
+                teams.forEach(team => {
+                    const teamTitle = document.createElement("h3");
+                    teamTitle.textContent = team.teamName;
+                    saved.appendChild(teamTitle);
+
+                    team.characters.forEach(char => {
+                        const charDiv = document.createElement("div");
+                        charDiv.classList.add("col-sm-3");
+                        charDiv.innerHTML = `
+                            <div class="card generate-team-card">
+                                <img class="card-img-top" src="images/${char.characterName}.jpg">
+                                <h5 class="char-name">${char.characterName}</h5>
+                                <p>Path: ${char.characterPath}</p>
+                                <p>Element: ${char.characterElement}</p>
+                                <p>Rarity: ${char.characterRarity}</p>
+                            </div>
+                        `;
+                        saved.appendChild(charDiv);
+                    });
+                });
+                } catch (error) {
+                    console.error(error);
+                    document.getElementById("saved-team").innerHTML = "<p>Error loading teams.</p>"
+                }
+            }
+            document.addEventListener("DOMContentLoaded", loadTeam);
+    </script>
+</body>
+</html>

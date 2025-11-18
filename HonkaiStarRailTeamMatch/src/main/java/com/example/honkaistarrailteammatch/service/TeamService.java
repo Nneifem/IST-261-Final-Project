@@ -26,35 +26,23 @@ public class TeamService {
     public Team generateTeam(String username, List<String> selectedCharacters) {
         Player player = playerRepository.findById(username).orElseThrow(() -> new RuntimeException("Player Not Found"));
 
+        // deleting old teams
+        List<Team> oldTeams = teamRepository.findByPlayerUsername(username);
+        if (!oldTeams.isEmpty()) {
+            teamRepository.deleteAll(oldTeams);
+        }
+
         // getting the characters the user selected
-        List<Character> selectCharacters = player.getOwnedCharacters();
+        List<Character> selectCharacters = characterRepository.findByCharacterNameIn(selectedCharacters);
 
         Team team = new Team();
         team.setPlayer(player);
         team.setTeamName(player.getUsername() + "'s Generated Team");
         team.setCharacters(selectCharacters);
-        team.setTeamExplanation(generateExplanation(selectCharacters));
 
-        return teamRepository.save(team);
-    }
-
-    // creating the generateExplanation for why the team was chosen
-    private String generateExplanation(List<Character> team) {
-        Set<String> paths = team.stream().map(Character::getCharacterPath).collect(Collectors.toSet());
-        Set<String> elements = team.stream().map(Character::getCharacterElement).collect(Collectors.toSet());
-
-        StringBuilder sb = new StringBuilder();
-        sb.append("The following characters have been assigned to the team:\n. The elements it contains are");
-        sb.append(elements.size()).append(" and ");
-        sb.append(paths.size()).append(" paths. ");
-
-        if (paths.contains("Abundance")) sb.append(paths.contains("Has a healer"));
-        if (paths.contains("Preservation")) sb.append(paths.contains("Has a shielder"));
-        if (paths.contains("Harmony")) sb.append(paths.contains("Has a support buffer"));
-        if (paths.contains("Destruction") || paths.contains("Hunt")) sb.append(paths.contains("Has at least one DPS"));
-
-        sb.append("Balanced team for the main story quest.");
-        return sb.toString();
+        player.getGeneratedTeams().add(team);
+        playerRepository.save(player);
+        return team;
     }
 
     // lists all the generated team for the user
@@ -64,5 +52,9 @@ public class TeamService {
 
     public Team getTeam(Long teamId) {
         return teamRepository.findById(teamId).orElseThrow(() -> new RuntimeException("Team Not Found"));
+    }
+
+    public List<Team> getTeamsByUsername(String username) {
+        return teamRepository.findByPlayerUsername(username);
     }
 }

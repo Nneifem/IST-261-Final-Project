@@ -43,4 +43,18 @@ public class PlayerService {
         player.setOwnedCharacters(selectedCharacters);
         playerRepository.save(player);
     }
+
+    public List<String> getPlayerCharacterNames(String username) {
+        Optional<Player> player = playerRepository.findById(username);
+
+        if (player.isPresent()) {
+            Player player1 = player.get();
+            List<String> characterNames = new ArrayList<>();
+            for (Character character : player1.getOwnedCharacters()) {
+                characterNames.add(character.getCharacterName());
+            }
+            return characterNames;
+        }
+        return new ArrayList<>();
+    }
 }

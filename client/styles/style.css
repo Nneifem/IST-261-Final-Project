@@ -23,12 +23,20 @@ button.btn.btn-primary {
     padding-top: 10px;
 }
 
-.sign-up-link a {
+.sign-up-link a, .login-link a, .sign-out-link a {
     color: lightcoral;
 }
 
-.sign-
+.sign-out-link a {
+    padding: 22px;
+}
+
 /* Homepage */
+.page-name {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
 .sub-title {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 30px;
@@ -38,10 +46,27 @@ img {
     width: 150px;
 }
 
-.character-card {
-    margin-bottom: 38px;
+div.card.character-card {
+    height: 90%;
 }
 
-.character-button {
-    margin-bottom: 40px;
+div.col-sm-3 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+h5.char-name {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#team-container {
+    display: flex;
+    width: 90%;
+}
+
+div.card.generate-team-cardd {
+    height: 100%;
 }

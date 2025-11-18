@@ -3,8 +3,10 @@ package com.example.honkaistarrailteammatch.controller;
 import com.example.honkaistarrailteammatch.model.Player;
 import com.example.honkaistarrailteammatch.model.Team;
 import com.example.honkaistarrailteammatch.repository.PlayerRepository;
+import com.example.honkaistarrailteammatch.repository.TeamRepository;
 import com.example.honkaistarrailteammatch.service.PlayerService;
 import com.example.honkaistarrailteammatch.service.TeamService;
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +26,8 @@ public class PlayerController {
     private PlayerRepository playerRepository;
     @Autowired
     private TeamService teamService;
+    @Autowired
+    private TeamRepository teamRepository;
 
     @PostMapping("/signup")
     public Player signup(@RequestBody Player player) {
@@ -47,8 +51,30 @@ public class PlayerController {
         return ResponseEntity.ok().build();
     }
 
+    @GetMapping("/{username}/characters")
+    public List<String> getPlayerCharacters(@PathVariable String username) {
+        return playerService.getPlayerCharacterNames(username);
+    }
+
     @GetMapping("/{username}/generateTeam")
     public Team generateTeam(@PathVariable String username, @RequestParam List<String> characterNames){
         return teamService.generateTeam(username, characterNames);
     }
+
+    @GetMapping("/{username}/teams")
+    public ResponseEntity<List<Team>> getAllTeams(@PathVariable String username){
+        try {
+            List<Team> teams = teamService.getTeamsByUsername(username);
+            return  ResponseEntity.ok().body(teams);
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @PostMapping("/{username}/teams/generate")
+    public Team saveGeneratedTeam(@PathVariable String username, @RequestBody Map<String, List<String>> payload) {
+        List<String> characterNames = payload.get("characters");
+        return teamService.generateTeam(username, characterNames);
+    }
+
 }

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Generate Team</title>
+</head>
+<body>
+    <h1>Your Generated Team:</h1>
+    <div id="team-container"></div>
+    <div id="team-explanation"></div>
+
+    <button id="save-generate-team-btn" type="button" class="btn btn-primary">Save team</button>
+
+    
+    <!-- Script code -->
+    <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const username = urlParams.get("username");
+            const USER_CHARACTER_URL = `http://localhost:8080/api/players/${username}/characters`;
+            const CHARACTER_URL = 'http://localhost:8080/api/characters/sync';
+            const SAVE_TEAM_URL = 'http://localhost:8080/api/teams/generate';
+            const teamContainer = document.getElementById("team-container");
+            const saveButton = document.getElementById("save-generate-team-btn");
+            const teamExplanation = document.getElementById("team-explanation");
+
+            let generatedTeam = [];
+
+        async function generatePlayersTeam() {
+            try {
+                const allRes = await fetch(CHARACTER_URL);
+                const allCharacters = await allRes.json();
+
+                const userRes = await fetch(USER_CHARACTER_URL);
+                if(!userRes.ok) throw new Error("Failed to fethc user characters");
+                const selectCharacters = await userRes.json();
+
+                if (selectCharacters.length === 0) {
+                    teamContainer.innerHTML = "<p>No characters selected. Go select characters<br><a href='homepage.html'>Pick your characters</a></p>";
+                    return;
+                }
+
+                    const userCharacters = allCharacters.filter(c => selectCharacters.includes(c.characterName));
+                    const team = [];
+
+                    const healer = userCharacters.find(c => c.characterPath === "Abundance");
+                    const shielder = userCharacters.find(c => c.characterPath === "Preservation");
+                    const buffer = userCharacters.find(c => c.characterPath === "Harmony");
+                    const dot = userCharacters.find(c => c.characterPath === "Nihility");
+                    const dps = userCharacters.find(c => c.characterPath === "Destruction" || c.characterPath === "Hunt");
+
+                    [healer, shielder, buffer, dot, dps].forEach(c => {
+                        if (c && !team.includes(c)) team.push(c);
+                    });
+
+                    userCharacters.forEach(c => {
+                        if (team.length >= 4) return;
+                        if (!team.includes(c)) team.push(c);
+                    });
+
+                    generatedTeam = team;
+
+                    team.forEach(char => {
+                        const div = document.createElement("div");
+                        div.classList.add("col-sm-3");
+                        div.innerHTML = `
+                        <div class="card generate-team-card">
+                            <img class="card-img-top" src="images/${char.characterName}.jpg">
+                            <h5 class="char-name">${char.characterName}</h5>
+                            <p>Path: ${char.characterPath}</p>
+                            <p>Element: ${char.characterElement}</p>
+                            <p>Rarity: ${char.characterRarity}</p>
+                        </div>
+                        `;
+                        teamContainer.appendChild(div);
+                    });
+                    const paths = new Set(team.map(c => c.characterPath));
+                    const elements = new Set(team.map(c => c.characterElement));
+
+                    let explanation = `This team contains ${team.length} characters.\n`;
+                    explanation += `Elements: ${Array.from(elements).join(", ")}.\n`;
+                    explanation += `Paths: ${Array.from(paths).join(", ")}.\n`;
+
+                    if (paths.has("Abundance")) explanation += "Has a healer. ";
+                    if (paths.has("Preservation")) explanation += "Has a shielder. ";
+                    if (paths.has("Harmony")) explanation += "Has a buffer. ";
+                    if (paths.has("Nihility")) explanation += "Has a debuffer. ";
+                    if (paths.has("Destruction") || paths.has("Hunt")) explanation += "Has at least one DPS. ";
+
+                    explanation += "Balance team for the main story quest.";
+                    teamExplanation.textContent = explanation;
+
+                    // saving the generated team
+                    saveButton.addEventListener("click", async () => {
+                        try {
+                            const teamNames = generatedTeam.map(c => c.characterName);
+                            const response = await fetch(`${SAVE_TEAM_URL}/${username}`, {
+                                method: "POST",
+                                headers: {"Content-Type": "application/json"},
+                                body: JSON.stringify({characters: teamNames})
+                            });
+
+                            if(!response.ok) throw new Error("Failed to save team.");
+
+                            const savedTeam = await response.json();
+                            alert("Team saved successfully");
+                            window.location.href = `viewteam.html?username=${encodeURIComponent(username)}`;
+                        } catch (err) {
+                            console.error(err);
+                            alert("Failed to load team")
+                        }
+                    });
+                } catch (err) {
+                    console.error(err);
+                }
+            }
+            document.addEventListener("DOMContentLoaded", generatePlayersTeam);
+    </script>
+</body>
+</html>

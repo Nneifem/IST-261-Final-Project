@@ -6,29 +6,37 @@
     <title>Homepage</title>
 </head>
 <body>
-    <h1 class="title">Honkai Star Rail Team Match</h1>
+    <div>
+        <h1 class="page-name">Honkai Star Rail Team Match</h1>
+        <p class="sign-out-link"><a href="login.html">Sign out</a></p>
+        <a id="view-team" href="#">View Team</a>
+    </div>
     <h3 class="sub-title">Select the characters you own:</h3>
 
     <div class="container">
         <div id="characters-container" class="row justtify-content-center"></div>
     </div>
 
-    <div id="generated-team">
-        <h4>Generated Team:</h4>
-        <div id="team-cards" class="row"></div>
-    </div>
-
-    <button id="submit-btn" type="submit" class="btn btn-primary">Submit</button>
-
+    <button id="generate-team-btn" type="button" class="btn btn-primary">Generate team</button>
     
     <!-- Script code -->
     <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get("username");
+
+        if (!username) {
+            alert("Username not found! Login");
+            window.location.href = "login.html";
+        }
+
+        const viewTeamLink = document.getElementById("view-team");
         const CHARACTER_URL = 'http://localhost:8080/api/characters/sync';
+        const SAVE_CHARACTERS_URL = `http://localhost:8080/api/players/${username}/characters`;
         const selectCharacters = new Set();
-        const currentUsername = localStorage.getItem('currentUsername');
+        const characterList = document.getElementById('characters-container');
+        const generateTeam = document.getElementById("generate-team-btn");
 
-        const characterList = document.getElementById('characters-container')
-
+        viewTeamLink.href = `viewteam.html?username=${encodeURIComponent(username)}`;
         // loading the characters
         async function loadCharacters() {
             try {
@@ -43,27 +51,25 @@
 
                     charDiv.innerHTML = `
                         <div class="card character-card">
-                            <button class="character-button">
                             <img class="card-img-top" src="images/${char.characterName}.jpg">
-                                <h5>${char.characterName}</h5>
+                                <h5 class="char-name">${char.characterName}</h5>
                                 <p>Path: ${char.characterPath}</p>
                                 <p>Element: ${char.characterElement}</p>
                                 <p>Rarity: ${char.characterRarity}</p>
-                            </button>
+                                <button type="button" class="btn btn-primary">add</button>
                         </div>
                     `;
 
-                    const cardElement = charDiv.querySelector('.card');
-                    cardElement.addEventListener('click', () => {
+                    charDiv.querySelector('.card').addEventListener('click', () => {
                         if (selectCharacters.has(char.characterName)) {
                             selectCharacters.delete(char.characterName);
-                            cardElement.classList.remove('selected');
+                            charDiv.querySelector('.card').classList.remove('selected');
                         } else {
                             selectCharacters.add(char.characterName);
-                            cardElement.classList.add('selected');
+                            charDiv.querySelector('.card').classList.add('selected');
+                            alert(`${char.characterName} has been added`);
                         }
                     });
-
                     characterList.appendChild(charDiv);
                 });
             } catch (error) {
@@ -73,6 +79,29 @@
         }
         document.addEventListener('DOMContentLoaded', loadCharacters);
 
+        // saving the selected characters and generating team
+        generateTeam.addEventListener('click', async () => {
+            if (selectCharacters.size < 4) {
+                alert("Please select at least 4 character!");
+                return;
+            }
+
+
+            try {
+                const response = await fetch(SAVE_CHARACTERS_URL, {
+                    method: "POST",
+                    headers: {"Content-Type": "application/json"},
+                    body: JSON.stringify({characters: Array.from(selectCharacters)})
+                });
+                if (!response.ok) {
+                    throw new Error("Failed to save characters.");
+                }
+                alert("Charactesr saved succfessfully!");
+                window.location.href = `generateteam.html?username=${encodeURIComponent(username)}`;
+            } catch (error) {
+                console.error(error);
+            }
+        });
     </script>
 
 </body>

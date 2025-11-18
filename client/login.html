@@ -35,24 +35,18 @@
         document.getElementById("login").addEventListener("submit", async function(e) {
             e.preventDefault();
 
-            const form = document.getElementById('login');
-            const username = document.getElementById('username-input');
-            const password = document.getElementById('password-input');
+            const usernameValue = document.getElementById('username-input').value;
+            const passwordValue = document.getElementById('password-input').value;
 
-            if (!username.value || !password.value) {
+            if (!usernameValue || !passwordValue) {
                 alert("All fields are required!");
             }
 
             try {
                 const response = await fetch(LOGIN_URL, {
                     method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                        username: username.value,
-                        password: password.value
-                    })
+                    headers: {"Content-Type": "application/json"},
+                    body: JSON.stringify({username: usernameValue, password: passwordValue})
                 });
                 if (!response.ok) {
                     alert("Invalid login. Please try again.");
@@ -61,9 +55,7 @@
 
                 const data = await response.json();
                 alert("Login successful!");
-                // saving to local storage
-                localStorage.setItem('currentUsername', username.value);
-                window.location.href = 'homepage.html';
+                window.location.href = `homepage.html?username=${encodeURIComponent(usernameValue)}`;
 
             } catch (error) {
                 console.error(error);
