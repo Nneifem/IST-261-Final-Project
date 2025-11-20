@@ -32,9 +32,24 @@ button.btn.btn-primary {
 }
 
 /* Homepage */
-.page-name {
-    padding-left: 20px;
-    padding-top: 20px;
+
+a.navbar-brand {
+    font-size: 35px;
+    padding-right: 40%;
+}
+
+.header-sign-out {
+    color: black;
+    font-size: 17px;
+}
+
+#view-team {
+    color: black;
+    font-size: 17px;
+}
+
+.div.nav-item.active {
+    font-size: 20px;
 }
 
 .sub-title {
@@ -48,6 +63,10 @@ img {
 
 div.card.character-card {
     height: 90%;
+}
+
+.generate-team-btn {
+    margin: 20px;
 }
 
 div.col-sm-3 {
@@ -71,3 +90,22 @@ div.card.generate-team-card {
     height: 100%;
 }
 
+#generate-team-btn {
+    display: flex;
+    font-size: 20px;
+    background-color: lightseagreen;
+    align-content: center;
+    margin-left: 170px;
+    margin-bottom: 40px;
+}
+
+
+/* Viewteam */
+h3.player-team-name {
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    flex-direction: row;
+}

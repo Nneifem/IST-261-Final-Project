@@ -6,6 +6,19 @@
     <title>Character list</title>
 </head>
 <body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="homepage.html">Honkai Star Rail Team Match</a>
+                <div class="nav-item active">
+                    <a href="login.html" class="header-sign-out">Sign out</a>
+                </div>
+                <div class="nav-item active">
+                    <a id="view-team" href="viewteam.html">View Team</a>
+                </div>
+            </div>
+        </nav>
+    </div>
     <h1>Saved team</h1>
     <div id="saved-team"></div>
 
@@ -36,7 +49,6 @@
                     const teamHeader = document.createElement("div");
                     teamHeader.innerHTML = `
                         <h3 class="player-team-name">${team.teamName}</h3>
-                        <button class="btn btn-danger btn-sm delete-btn">Delete Team</button>
                     `;
                     teamDiv.appendChild(teamHeader);
 
@@ -54,9 +66,14 @@
                         `;
                         teamDiv.appendChild(charDiv);
                     });
+                    
+                    const deleteButton = document.createElement("button");
+                    deleteButton.classList.add("btn", "delete-btn");
+                    deleteButton.textContent = "Delete Team";
+                    teamDiv.appendChild(deleteButton);
+
                     saved.appendChild(teamDiv);
 
-                    const deleteButton = teamHeader.querySelector(".delete-btn");
                     deleteButton.addEventListener("click", async () => {
                         if (confirm(`Are you sure you want to delete ${team.teamName}`)) {
                             try {
@@ -82,12 +99,3 @@
     </script>
 </body>
 </html>
-
-<!--
-    const teamHeader = document.createElement("div");
-                    teamHeader.innerHTML = `
-                        <h3>${team.teamName}</h3>
-                        <button class="btn btn-danger btn-sm delete-btn">Delete Team</button>
-                    `;
-                    teamDiv.appendChild(teamHeader);
--->
