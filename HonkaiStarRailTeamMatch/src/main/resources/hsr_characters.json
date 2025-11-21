@@ -1,555 +1,499 @@
-[
-  {
-    "characterName": "Acheron",
-    "characterPath": "Nihility",
-    "characterElement": "Lightning",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Acheron.jpg"
-  },
-  {
-    "characterName": "Aglaea",
-    "characterPath": "Remembrance",
-    "characterElement": "Lightning",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Aglaea.jpg"
-  },
-  {
-    "characterName": "Anaxa",
-    "characterPath": "Erudition",
-    "characterElement": "Wind",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Anaxa.jpg"
-  },
-  {
-    "characterName": "Archer",
-    "characterPath": "Hunt",
-    "characterElement": "Quantum",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Aglaea.jpg"
-  },
-  {
-    "characterName": "Argenti",
-    "characterPath": "Erudition",
-    "characterElement": "Physical",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Argenti.jpg"
-  },
-  {
-    "characterName": "Arlan",
-    "characterPath": "Destruction",
-    "characterElement": "Lightning",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Arlan.jpg"
-  },
-  {
-    "characterName": "Asta",
-    "characterPath": "Harmony",
-    "characterElement": "Fire",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Asta.jpg"
-  },
-  {
-    "characterName": "Aventurine",
-    "characterPath": "Preservation",
-    "characterElement": "Imaginary",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Aventurine.jpg"
-  },
-  {
-    "characterName": "Bailu",
-    "characterPath": "Abundance",
-    "characterElement": "Imaginary",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Bailu.jpg"
-  },
-  {
-    "characterName": "Black Swan",
-    "characterPath": "Nihility",
-    "characterElement": "Wind",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Black_Swan.jpg"
-  },
-  {
-    "characterName": "Blade",
-    "characterPath": "Destruction",
-    "characterElement": "Wind",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Blade.jpg"
-  },
-  {
-    "characterName": "Boothill",
-    "characterPath": "Hunt",
-    "characterElement": "Physical",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Boothill.jpg"
-  },
-  {
-    "characterName": "Bronya",
-    "characterPath": "Harmony",
-    "characterElement": "Wind",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Bronya.jpg"
-  },
-  {
-    "characterName": "Castorice",
-    "characterPath": "Remembrance",
-    "characterElement": "Quantum",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Castorice.jpg"
-  },
-  {
-    "characterName": "Cerydra",
-    "characterPath": "Harmony",
-    "characterElement": "Wind",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Cerydra.jpg"
-  },
-  {
-    "characterName": "Cipher",
-    "characterPath": "Nihility",
-    "characterElement": "Quantum",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Cipher.jpg"
-  },
-  {
-    "characterName": "Clara",
-    "characterPath": "Destruction",
-    "characterElement": "Physical",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Clara.jpg"
-  },
-  {
-    "characterName": "Cyrene",
-    "characterPath": "Remembrance",
-    "characterElement": "Ice",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Cyrene.jpg"
-  },
-  {
-    "characterName": "Dan Heng",
-    "characterPath": "Hunt",
-    "characterElement": "Wind",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Dan_Heng.jpg"
-  },
-  {
-    "characterName": "Dan Heng: Imbibitor Lunae",
-    "characterPath": "Destruction",
-    "characterElement": "Imaginary",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/DanHengImbibitorLunae.jpg"
-  },
-  {
-    "characterName": "Dan Heng: Permansor Terrae",
-    "characterPath": "Preservation",
-    "characterElement": "Physical",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/DanHengPermansorTerrae.jpg"
-  },
-  {
-    "characterName": "Dr. Ratio",
-    "characterPath": "Hunt",
-    "characterElement": "Imaginary",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Dr_Ratio.jpg"
-  },
-  {
-    "characterName": "Evernight",
-    "characterPath": "Remembrance",
-    "characterElement": "Ice",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Evernight.jpg"
-  },
-  {
-    "characterName": "Feixiao",
-    "characterPath": "Hunt",
-    "characterElement": "Wind",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Feixiao.jpg"
-  },
-  {
-    "characterName": "Firefly",
-    "characterPath": "Destruction",
-    "characterElement": "Fire",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Firefly.jpg"
-  },
-  {
-    "characterName": "Fu Xuan",
-    "characterPath": "Preservation",
-    "characterElement": "Quantum",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Fu_Xuan.jpg"
-  },
-  {
-    "characterName": "Fugue",
-    "characterPath": "Nihility",
-    "characterElement": "Fire",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Fugue.jpg"
-  },
-  {
-    "characterName": "Gallagher",
-    "characterPath": "Abundance",
-    "characterElement": "Fire",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Gallagher.jpg"
-  },
-  {
-    "characterName": "Gepard",
-    "characterPath": "Preservation",
-    "characterElement": "Ice",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Gepard.jpg"
-  },
-  {
-    "characterName": "Guinaifen",
-    "characterPath": "Nihility",
-    "characterElement": "Fire",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Guinaifen.jpg"
-  },
-  {
-    "characterName": "Hanya",
-    "characterPath": "Harmony",
-    "characterElement": "Physical",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Hanya.jpg"
-  },
-  {
-    "characterName": "Herta",
-    "characterPath": "Erudition",
-    "characterElement": "Ice",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Herta.jpg"
-  },
-  {
-    "characterName": "Himeko",
-    "characterPath": "Erudition",
-    "characterElement": "Fire",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Himkeo.jpg"
-  },
-  {
-    "characterName": "Hook",
-    "characterPath": "Destruction",
-    "characterElement": "Fire",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Hook.jpg"
-  },
-  {
-    "characterName": "Huohuo",
-    "characterPath": "Abundance",
-    "characterElement": "Wind",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Huohuo.jpg"
-  },
-  {
-    "characterName": "Hyacine",
-    "characterPath": "Remembrance",
-    "characterElement": "Wind",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Hyacine.jpg"
-  },
-  {
-    "characterName": "Hysilens",
-    "characterPath": "Nihility",
-    "characterElement": "Physical",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Hysilens.jpg"
-  },
-  {
-    "characterName": "Jade",
-    "characterPath": "Erudition",
-    "characterElement": "Quantum",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Jade.jpg"
-  },
-  {
-    "characterName": "Jiaoqiu",
-    "characterPath": "Nihility",
-    "characterElement": "Fire",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Jiaoqiu.jpg"
-  },
-  {
-    "characterName": "Jing Yuan",
-    "characterPath": "Erudition",
-    "characterElement": "Lightning",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Jing_Yuan.jpg"
-  },
-  {
-    "characterName": "Jingliu",
-    "characterPath": "Destruction",
-    "characterElement": "Ice",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Jingliu.jpg"
-  },
-  {
-    "characterName": "Kafka",
-    "characterPath": "Nihility",
-    "characterElement": "Lightning",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Kafka.jpg"
-  },
-  {
-    "characterName": "Lingsha",
-    "characterPath": "Abundance",
-    "characterElement": "Fire",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Lingsha.jpg"
-  },
-  {
-    "characterName": "Luka",
-    "characterPath": "Nihility",
-    "characterElement": "Physical",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Luka.jpg"
-  },
-  {
-    "characterName": "Luocha",
-    "characterPath": "Abundance",
-    "characterElement": "Imaginary",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Luocha.jpg"
-  },
-  {
-    "characterName": "Lynx",
-    "characterPath": "Abundance",
-    "characterElement": "Quantum",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Lynx.jpg"
-  },
-  {
-    "characterName": "March 7th",
-    "characterPath": "Preservation",
-    "characterElement": "Ice",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/March_7th.jpg"
-  },
-  {
-    "characterName": "March 7th: The Hunt",
-    "characterPath": "Hunt",
-    "characterElement": "Imaginary",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/March7thHunt.jpg"
-  },
-  {
-    "characterName": "Misha",
-    "characterPath": "Destruction",
-    "characterElement": "Ice",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Misha.jpg"
-  },
-  {
-    "characterName": "Moze",
-    "characterPath": "Hunt",
-    "characterElement": "Lightning",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Moze.jpg"
-  },
-  {
-    "characterName": "Mydei",
-    "characterPath": "Destruction",
-    "characterElement": "Imaginary",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Mydei.jpg"
-  },
-  {
-    "characterName": "Natasha",
-    "characterPath": "Abundance",
-    "characterElement": "Physical",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Natasha.jpg"
-  },
-  {
-    "characterName": "Pela",
-    "characterPath": "Nihility",
-    "characterElement": "Ice",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Pela.jpg"
-  },
-  {
-    "characterName": "Phainon",
-    "characterPath": "Destruction",
-    "characterElement": "Physical",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Phainon.jpg"
-  },
-  {
-    "characterName": "Qingque",
-    "characterPath": "Erudition",
-    "characterElement": "Quantum",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Qingque.jpg"
-  },
-  {
-    "characterName": "Rappa",
-    "characterPath": "Erudition",
-    "characterElement": "Imaginary",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Rappa.jpg"
-  },
-  {
-    "characterName": "Robin",
-    "characterPath": "Harmony",
-    "characterElement": "Physical",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Robin.jpg"
-  },
-  {
-    "characterName": "Ruan Mei",
-    "characterPath": "Harmony",
-    "characterElement": "Ice",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Ruan_Mei.jpg"
-  },
-  {
-    "characterName": "Saber",
-    "characterPath": "Destruction",
-    "characterElement": "Wind",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Saber.jpg"
-  },
-  {
-    "characterName": "Sampo",
-    "characterPath": "Nihility",
-    "characterElement": "Wind",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Sampo.jpg"
-  },
-  {
-    "characterName": "Seele",
-    "characterPath": "Hunt",
-    "characterElement": "Quantum",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Seele.jpg"
-  },
-  {
-    "characterName": "Serval",
-    "characterPath": "Erudition",
-    "characterElement": "Lightning",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Serval.jpg"
-  },
-  {
-    "characterName": "Silver Wolf",
-    "characterPath": "Nihility",
-    "characterElement": "Quantum",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Silver_Wolf.jpg"
-  },
-  {
-    "characterName": "Sparkle",
-    "characterPath": "Harmony",
-    "characterElement": "Quantum",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Sparkle.jpg"
-  },
-  {
-    "characterName": "Sunday",
-    "characterPath": "Harmony",
-    "characterElement": "Imaginary",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Sunday.jpg"
-  },
-  {
-    "characterName": "Sushang",
-    "characterPath": "Hunt",
-    "characterElement": "Physical",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Sushang.jpg"
-  },
-  {
-    "characterName": "The Herta",
-    "characterPath": "Erudition",
-    "characterElement": "Ice",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/The_Herta.jpg"
-  },
-  {
-    "characterName": "Tingyun",
-    "characterPath": "Harmony",
-    "characterElement": "Lightning",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Tingyun.jpg"
-  },
-  {
-    "characterName": "Topaz and Numby",
-    "characterPath": "Hunt",
-    "characterElement": "Fire",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Topaz_and_Numby.jpg"
-  },
-  {
-    "characterName": "Trailblazer: Remembrance",
-    "characterPath": "Remembrance",
-    "characterElement": "Ice",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/TrailblazerRemembrance.jpg"
-  },
-  {
-    "characterName": "Trailblazer",
-    "characterPath": "Destruction",
-    "characterElement": "Physical",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Trailblazer.jpg"
-  },
-  {
-    "characterName": "Trailblazer: Imaginary",
-    "characterPath": "Harmony",
-    "characterElement": "Imaginary",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/TrailblazerTheHarmony.jpg"
-  },
-  {
-    "characterName": "Trailblazer: Preservation",
-    "characterPath": "Preservation",
-    "characterElement": "Fire",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/TrailblazerThePreservation.jpg"
-  },
-  {
-    "characterName": "Tribbie",
-    "characterPath": "Harmony",
-    "characterElement": "Quantum",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Tribbie.jpg"
-  },
-  {
-    "characterName": "Welt",
-    "characterPath": "Nihility",
-    "characterElement": "Imaginary",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Welt.jpg"
-  },
-  {
-    "characterName": "Xueyi",
-    "characterPath": "Destruction",
-    "characterElement": "Quantum",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Xueyi.jpg"
-  },
-  {
-    "characterName": "Yanqing",
-    "characterPath": "Hunt",
-    "characterElement": "Ice",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Yanqing.jpg"
-  },
-  {
-    "characterName": "Yukong",
-    "characterPath": "Harmony",
-    "characterElement": "Imaginary",
-    "characterRarity": 4,
-    "img": "http://localhost:8080/images/Yukong.jpg"
-  },
-  {
-    "characterName": "Yunli",
-    "characterPath": "Destruction",
-    "characterElement": "Physical",
-    "characterRarity": 5,
-    "img": "http://localhost:8080/images/Yunli.jpg"
-  }
-]
+[ {
+  "characterName" : "Acheron",
+  "characterPath" : "Nihility",
+  "characterElement" : "Lightning",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Acheron.jpg"
+}, {
+  "characterName" : "Aglaea",
+  "characterPath" : "Remembrance",
+  "characterElement" : "Lightning",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Aglaea.jpg"
+}, {
+  "characterName" : "Anaxa",
+  "characterPath" : "Erudition",
+  "characterElement" : "Wind",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Anaxa.jpg"
+}, {
+  "characterName" : "Archer",
+  "characterPath" : "Hunt",
+  "characterElement" : "Quantum",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Aglaea.jpg"
+}, {
+  "characterName" : "Argenti",
+  "characterPath" : "Erudition",
+  "characterElement" : "Physical",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Argenti.jpg"
+}, {
+  "characterName" : "Arlan",
+  "characterPath" : "Destruction",
+  "characterElement" : "Lightning",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Arlan.jpg"
+}, {
+  "characterName" : "Asta",
+  "characterPath" : "Harmony",
+  "characterElement" : "Fire",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Asta.jpg"
+}, {
+  "characterName" : "Aventurine",
+  "characterPath" : "Preservation",
+  "characterElement" : "Imaginary",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Aventurine.jpg"
+}, {
+  "characterName" : "Bailu",
+  "characterPath" : "Abundance",
+  "characterElement" : "Imaginary",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Bailu.jpg"
+}, {
+  "characterName" : "Black Swan",
+  "characterPath" : "Nihility",
+  "characterElement" : "Wind",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Black_Swan.jpg"
+}, {
+  "characterName" : "Blade",
+  "characterPath" : "Destruction",
+  "characterElement" : "Wind",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Blade.jpg"
+}, {
+  "characterName" : "Boothill",
+  "characterPath" : "Hunt",
+  "characterElement" : "Physical",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Boothill.jpg"
+}, {
+  "characterName" : "Bronya",
+  "characterPath" : "Harmony",
+  "characterElement" : "Wind",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Bronya.jpg"
+}, {
+  "characterName" : "Castorice",
+  "characterPath" : "Remembrance",
+  "characterElement" : "Quantum",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Castorice.jpg"
+}, {
+  "characterName" : "Cerydra",
+  "characterPath" : "Harmony",
+  "characterElement" : "Wind",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Cerydra.jpg"
+}, {
+  "characterName" : "Cipher",
+  "characterPath" : "Nihility",
+  "characterElement" : "Quantum",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Cipher.jpg"
+}, {
+  "characterName" : "Clara",
+  "characterPath" : "Destruction",
+  "characterElement" : "Physical",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Clara.jpg"
+}, {
+  "characterName" : "Cyrene",
+  "characterPath" : "Remembrance",
+  "characterElement" : "Ice",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Cyrene.jpg"
+}, {
+  "characterName" : "Dan Heng",
+  "characterPath" : "Hunt",
+  "characterElement" : "Wind",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Dan_Heng.jpg"
+}, {
+  "characterName" : "Dan Heng Imbibitor Lunae",
+  "characterPath" : "Destruction",
+  "characterElement" : "Imaginary",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Dan_Heng_Imbibitor_Lunae.jpg"
+}, {
+  "characterName" : "Dan Heng Permansor Terrae",
+  "characterPath" : "Preservation",
+  "characterElement" : "Physical",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Dan_Heng_Permansor_Terrae.jpg"
+}, {
+  "characterName" : "Dan Heng Imbibitor Lunae",
+  "characterPath" : "Destruction",
+  "characterElement" : "Imaginary",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Dan_Heng_Imbibitor_Lunae.jpg"
+}, {
+  "characterName" : "Dan Heng Permansor Terrae",
+  "characterPath" : "Preservation",
+  "characterElement" : "Physical",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Dan_Heng_Permansor_Terrae.jpg"
+}, {
+  "characterName" : "Dr. Ratio",
+  "characterPath" : "Hunt",
+  "characterElement" : "Imaginary",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Dr_Ratio.jpg"
+}, {
+  "characterName" : "Evernight",
+  "characterPath" : "Remembrance",
+  "characterElement" : "Ice",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Evernight.jpg"
+}, {
+  "characterName" : "Feixiao",
+  "characterPath" : "Hunt",
+  "characterElement" : "Wind",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Feixiao.jpg"
+}, {
+  "characterName" : "Firefly",
+  "characterPath" : "Destruction",
+  "characterElement" : "Fire",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Firefly.jpg"
+}, {
+  "characterName" : "Fu Xuan",
+  "characterPath" : "Preservation",
+  "characterElement" : "Quantum",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Fu_Xuan.jpg"
+}, {
+  "characterName" : "Fugue",
+  "characterPath" : "Nihility",
+  "characterElement" : "Fire",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Fugue.jpg"
+}, {
+  "characterName" : "Gallagher",
+  "characterPath" : "Abundance",
+  "characterElement" : "Fire",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Gallagher.jpg"
+}, {
+  "characterName" : "Gepard",
+  "characterPath" : "Preservation",
+  "characterElement" : "Ice",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Gepard.jpg"
+}, {
+  "characterName" : "Guinaifen",
+  "characterPath" : "Nihility",
+  "characterElement" : "Fire",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Guinaifen.jpg"
+}, {
+  "characterName" : "Hanya",
+  "characterPath" : "Harmony",
+  "characterElement" : "Physical",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Hanya.jpg"
+}, {
+  "characterName" : "Herta",
+  "characterPath" : "Erudition",
+  "characterElement" : "Ice",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Herta.jpg"
+}, {
+  "characterName" : "Himeko",
+  "characterPath" : "Erudition",
+  "characterElement" : "Fire",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Himeko.jpg"
+}, {
+  "characterName" : "Hook",
+  "characterPath" : "Destruction",
+  "characterElement" : "Fire",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Hook.jpg"
+}, {
+  "characterName" : "Huohuo",
+  "characterPath" : "Abundance",
+  "characterElement" : "Wind",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Huohuo.jpg"
+}, {
+  "characterName" : "Hyacine",
+  "characterPath" : "Remembrance",
+  "characterElement" : "Wind",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Hyacine.jpg"
+}, {
+  "characterName" : "Hysilens",
+  "characterPath" : "Nihility",
+  "characterElement" : "Physical",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Hysilens.jpg"
+}, {
+  "characterName" : "Jade",
+  "characterPath" : "Erudition",
+  "characterElement" : "Quantum",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Jade.jpg"
+}, {
+  "characterName" : "Jiaoqiu",
+  "characterPath" : "Nihility",
+  "characterElement" : "Fire",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Jiaoqiu.jpg"
+}, {
+  "characterName" : "Jing Yuan",
+  "characterPath" : "Erudition",
+  "characterElement" : "Lightning",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Jing_Yuan.jpg"
+}, {
+  "characterName" : "Jingliu",
+  "characterPath" : "Destruction",
+  "characterElement" : "Ice",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Jingliu.jpg"
+}, {
+  "characterName" : "Kafka",
+  "characterPath" : "Nihility",
+  "characterElement" : "Lightning",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Kafka.jpg"
+}, {
+  "characterName" : "Lingsha",
+  "characterPath" : "Abundance",
+  "characterElement" : "Fire",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Lingsha.jpg"
+}, {
+  "characterName" : "Luka",
+  "characterPath" : "Nihility",
+  "characterElement" : "Physical",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Luka.jpg"
+}, {
+  "characterName" : "Luocha",
+  "characterPath" : "Abundance",
+  "characterElement" : "Imaginary",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Luocha.jpg"
+}, {
+  "characterName" : "Lynx",
+  "characterPath" : "Abundance",
+  "characterElement" : "Quantum",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Lynx.jpg"
+}, {
+  "characterName" : "March 7th",
+  "characterPath" : "Preservation",
+  "characterElement" : "Ice",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/March_7th.jpg"
+}, {
+  "characterName" : "March 7th The Hunt",
+  "characterPath" : "Hunt",
+  "characterElement" : "Imaginary",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/March_7th_Hunt.jpg"
+}, {
+  "characterName" : "Misha",
+  "characterPath" : "Destruction",
+  "characterElement" : "Ice",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Misha.jpg"
+}, {
+  "characterName" : "Moze",
+  "characterPath" : "Hunt",
+  "characterElement" : "Lightning",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Moze.jpg"
+}, {
+  "characterName" : "Mydei",
+  "characterPath" : "Destruction",
+  "characterElement" : "Imaginary",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Mydei.jpg"
+}, {
+  "characterName" : "Natasha",
+  "characterPath" : "Abundance",
+  "characterElement" : "Physical",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Natasha.jpg"
+}, {
+  "characterName" : "Pela",
+  "characterPath" : "Nihility",
+  "characterElement" : "Ice",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Pela.jpg"
+}, {
+  "characterName" : "Phainon",
+  "characterPath" : "Destruction",
+  "characterElement" : "Physical",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Phainon.jpg"
+}, {
+  "characterName" : "Qingque",
+  "characterPath" : "Erudition",
+  "characterElement" : "Quantum",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Qingque.jpg"
+}, {
+  "characterName" : "Rappa",
+  "characterPath" : "Erudition",
+  "characterElement" : "Imaginary",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Rappa.jpg"
+}, {
+  "characterName" : "Robin",
+  "characterPath" : "Harmony",
+  "characterElement" : "Physical",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Robin.jpg"
+}, {
+  "characterName" : "Ruan Mei",
+  "characterPath" : "Harmony",
+  "characterElement" : "Ice",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Ruan_Mei.jpg"
+}, {
+  "characterName" : "Saber",
+  "characterPath" : "Destruction",
+  "characterElement" : "Wind",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Saber.jpg"
+}, {
+  "characterName" : "Sampo",
+  "characterPath" : "Nihility",
+  "characterElement" : "Wind",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Sampo.jpg"
+}, {
+  "characterName" : "Seele",
+  "characterPath" : "Hunt",
+  "characterElement" : "Quantum",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Seele.jpg"
+}, {
+  "characterName" : "Serval",
+  "characterPath" : "Erudition",
+  "characterElement" : "Lightning",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Serval.jpg"
+}, {
+  "characterName" : "Silver Wolf",
+  "characterPath" : "Nihility",
+  "characterElement" : "Quantum",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Silver_Wolf.jpg"
+}, {
+  "characterName" : "Sparkle",
+  "characterPath" : "Harmony",
+  "characterElement" : "Quantum",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Sparkle.jpg"
+}, {
+  "characterName" : "Sunday",
+  "characterPath" : "Harmony",
+  "characterElement" : "Imaginary",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Sunday.jpg"
+}, {
+  "characterName" : "Sushang",
+  "characterPath" : "Hunt",
+  "characterElement" : "Physical",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Sushang.jpg"
+}, {
+  "characterName" : "The Herta",
+  "characterPath" : "Erudition",
+  "characterElement" : "Ice",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/The_Herta.jpg"
+}, {
+  "characterName" : "Tingyun",
+  "characterPath" : "Harmony",
+  "characterElement" : "Lightning",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Tingyun.jpg"
+}, {
+  "characterName" : "Topaz and Numby",
+  "characterPath" : "Hunt",
+  "characterElement" : "Fire",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Topaz_and_Numby.jpg"
+}, {
+  "characterName" : "Trailblazer",
+  "characterPath" : "Destruction",
+  "characterElement" : "Physical",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Trailblazer_The_Destruction.jpg"
+}, {
+  "characterName" : "Trailblazer Imaginary",
+  "characterPath" : "Harmony",
+  "characterElement" : "Imaginary",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Trailblazer_The_Harmony.jpg"
+}, {
+  "characterName" : "Trailblazer Preservation",
+  "characterPath" : "Preservation",
+  "characterElement" : "Fire",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Trailblazer_The_Preservation.jpg"
+}, {
+  "characterName" : "Trailblazer Imaginary",
+  "characterPath" : "Harmony",
+  "characterElement" : "Imaginary",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Trailblazer_The_Harmony.jpg"
+}, {
+  "characterName" : "Trailblazer Preservation",
+  "characterPath" : "Preservation",
+  "characterElement" : "Fire",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Trailblazer_The_Preservation.jpg"
+}, {
+  "characterName" : "Trailblazer Remembrance",
+  "characterPath" : "Remembrance",
+  "characterElement" : "Ice",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Trailblazer_Remembrance.jpg"
+}, {
+  "characterName" : "Tribbie",
+  "characterPath" : "Harmony",
+  "characterElement" : "Quantum",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Tribbie.jpg"
+}, {
+  "characterName" : "Welt",
+  "characterPath" : "Nihility",
+  "characterElement" : "Imaginary",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Welt.jpg"
+}, {
+  "characterName" : "Xueyi",
+  "characterPath" : "Destruction",
+  "characterElement" : "Quantum",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Xueyi.jpg"
+}, {
+  "characterName" : "Yanqing",
+  "characterPath" : "Hunt",
+  "characterElement" : "Ice",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Yanqing.jpg"
+}, {
+  "characterName" : "Yukong",
+  "characterPath" : "Harmony",
+  "characterElement" : "Imaginary",
+  "characterRarity" : 4,
+  "img" : "http://localhost:8080/images/Yukong.jpg"
+}, {
+  "characterName" : "Yunli",
+  "characterPath" : "Destruction",
+  "characterElement" : "Physical",
+  "characterRarity" : 5,
+  "img" : "http://localhost:8080/images/Yunli.jpg"
+} ]

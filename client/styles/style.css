@@ -4,7 +4,9 @@
 }
 
 /* Sign Up and Login*/
-
+form {
+    margin: 30px;
+}
 .card-title {
     padding: 30px;
 }
@@ -33,24 +35,6 @@ button.btn.btn-primary {
 
 /* Homepage */
 
-a.navbar-brand {
-    font-size: 35px;
-    padding-right: 40%;
-}
-
-.header-sign-out {
-    color: black;
-    font-size: 17px;
-}
-
-#view-team {
-    color: black;
-    font-size: 17px;
-}
-
-.div.nav-item.active {
-    font-size: 20px;
-}
 
 .sub-title {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

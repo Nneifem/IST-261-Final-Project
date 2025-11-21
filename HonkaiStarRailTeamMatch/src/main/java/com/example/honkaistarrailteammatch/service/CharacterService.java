@@ -23,9 +23,7 @@ public class CharacterService {
 
     @PostConstruct
     public void init(){
-        if (characterRepository.count() == 0) {
-            saveCharacterFromJson();
-        }
+        saveCharacterFromJson();
     }
 
     public void saveCharacterFromJson() {
@@ -39,9 +37,7 @@ public class CharacterService {
 
             // checking for any new characters added into the database
             for (Character character : characters) {
-                if (!characterRepository.existsById(character.getCharacterName())) {
-                    characterRepository.save(character);
-                }
+                characterRepository.save(character);
             }
             System.out.println("Character has been saved successfully");
         } catch (IOException e) {
