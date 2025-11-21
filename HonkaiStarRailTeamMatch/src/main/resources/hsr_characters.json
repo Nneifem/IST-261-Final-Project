@@ -137,14 +137,14 @@
     "characterPath": "Destruction",
     "characterElement": "Imaginary",
     "characterRarity": 5,
-    "img": "http://localhost:8080/images/Dan_Heng_Imbibitor_Lunae.jpg"
+    "img": "http://localhost:8080/images/DanHengImbibitorLunae.jpg"
   },
   {
     "characterName": "Dan Heng: Permansor Terrae",
     "characterPath": "Preservation",
     "characterElement": "Physical",
     "characterRarity": 5,
-    "img": "http://localhost:8080/images/Dan_Heng_Permansor_Terrae.jpg"
+    "img": "http://localhost:8080/images/DanHengPermansorTerrae.jpg"
   },
   {
     "characterName": "Dr. Ratio",
@@ -333,7 +333,7 @@
     "characterPath": "Hunt",
     "characterElement": "Imaginary",
     "characterRarity": 4,
-    "img": "http://localhost:8080/images/March7th_Hunt.jpg"
+    "img": "http://localhost:8080/images/March7thHunt.jpg"
   },
   {
     "characterName": "Misha",
@@ -487,7 +487,7 @@
     "characterPath": "Remembrance",
     "characterElement": "Ice",
     "characterRarity": 5,
-    "img": "http://localhost:8080/images/Trailblazer_Remembrance.jpg"
+    "img": "http://localhost:8080/images/TrailblazerRemembrance.jpg"
   },
   {
     "characterName": "Trailblazer",
@@ -501,14 +501,14 @@
     "characterPath": "Harmony",
     "characterElement": "Imaginary",
     "characterRarity": 5,
-    "img": "http://localhost:8080/images/Trailblazer_Harmony.jpg"
+    "img": "http://localhost:8080/images/TrailblazerTheHarmony.jpg"
   },
   {
     "characterName": "Trailblazer: Preservation",
     "characterPath": "Preservation",
     "characterElement": "Fire",
     "characterRarity": 5,
-    "img": "http://localhost:8080/images/Trailblazer_Preservation.jpg"
+    "img": "http://localhost:8080/images/TrailblazerThePreservation.jpg"
   },
   {
     "characterName": "Tribbie",
