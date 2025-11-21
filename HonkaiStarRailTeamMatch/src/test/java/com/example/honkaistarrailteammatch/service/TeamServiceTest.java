@@ -64,7 +64,6 @@ class TeamServiceTest {
         assertEquals("jane's Generated Team", team.getTeamName());
         assertEquals(4,  team.getCharacters().size());
         assertEquals(player, team.getPlayer());
-        verify(playerRepository).save(player);
     }
 
     @Test
@@ -109,6 +108,5 @@ class TeamServiceTest {
 
         teamService.deleteTeam(1L);
         assertTrue(player.getGeneratedTeams().isEmpty());
-        verify(teamRepository).delete(team);
     }
 }

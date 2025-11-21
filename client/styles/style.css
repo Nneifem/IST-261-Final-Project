@@ -54,7 +54,8 @@ a.navbar-brand {
 
 .sub-title {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 30px;
+    margin-top: 40px;
+    margin-left: 150px;
 }
 
 img {
@@ -101,11 +102,24 @@ div.card.generate-team-card {
 
 
 /* Viewteam */
-h3.player-team-name {
-    text-align: center;
+.view-team-title {
+    margin-top: 40px;
+    margin-left: 65px;
 }
 
 .team-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.card-row {
+    display: flex;
     flex-direction: row;
+    width: 90%;
+}
+
+button.btn.delete-btn {
+    background: red;
+    color: white;
 }

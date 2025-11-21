@@ -39,6 +39,11 @@
         const characterList = document.getElementById('characters-container');
         const generateTeam = document.getElementById("generate-team-btn");
 
+        if (!username) {
+            alert("Username is not logged. Please login first.");
+            window.location.href = "login.html";
+        }
+
         viewTeamLink.href = `viewteam.html?username=${encodeURIComponent(username)}`;
         // loading the characters
         async function loadCharacters() {

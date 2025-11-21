@@ -19,7 +19,7 @@
             </div>
         </nav>
     </div>
-    <h1>Saved team</h1>
+    <h1 class="view-team-title">Saved team</h1>
     <div id="saved-team"></div>
 
     
@@ -46,11 +46,8 @@
                     const teamDiv = document.createElement("div");
                     teamDiv.classList.add("team-container");
                     
-                    const teamHeader = document.createElement("div");
-                    teamHeader.innerHTML = `
-                        <h3 class="player-team-name">${team.teamName}</h3>
-                    `;
-                    teamDiv.appendChild(teamHeader);
+                    const cardRow = document.createElement("div");
+                    cardRow.classList.add("card-row");
 
                     team.characters.forEach(char => {
                         const charDiv = document.createElement("div");
@@ -64,8 +61,9 @@
                                 <p>Rarity: ${char.characterRarity}</p>
                             </div>
                         `;
-                        teamDiv.appendChild(charDiv);
+                        cardRow.appendChild(charDiv);
                     });
+                    teamDiv.appendChild(cardRow);
                     
                     const deleteButton = document.createElement("button");
                     deleteButton.classList.add("btn", "delete-btn");

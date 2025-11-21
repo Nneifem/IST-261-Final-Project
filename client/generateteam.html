@@ -58,9 +58,9 @@
 
                     const healer = userCharacters.find(c => c.characterPath === "Abundance");
                     const shielder = userCharacters.find(c => c.characterPath === "Preservation");
-                    const buffer = userCharacters.find(c => c.characterPath === "Harmony");
+                    const buffer = userCharacters.find(c => c.characterPath === "Harmony" || c.characterPath === "Remembrance");
                     const dot = userCharacters.find(c => c.characterPath === "Nihility");
-                    const dps = userCharacters.find(c => c.characterPath === "Destruction" || c.characterPath === "Hunt");
+                    const dps = userCharacters.find(c => c.characterPath === "Destruction" || c.characterPath === "Hunt" || c.characterPath === "Remembrance");
 
                     [healer, shielder, buffer, dot, dps].forEach(c => {
                         if (c && !team.includes(c)) team.push(c);

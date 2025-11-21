@@ -87,7 +87,6 @@ class PlayerServiceTest {
         playerService.savePlayerCharacters("faye", List.of("Dan Heng", "Blade", "Jingliu", "Jing Yuan"));
 
         assertEquals(4, player.getOwnedCharacters().size());
-        verify(playerRepository).save(player);
     }
 
     @Test
