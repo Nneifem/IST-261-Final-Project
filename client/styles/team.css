@@ -1,0 +1,80 @@
+/* Font and Background */
+* {
+    font-family:'Times New Roman', Times, serif;
+}
+ 
+body {
+    background-image: url('../images/hsrloading.png');
+}
+
+/* Generateteam */
+#home-link.navbar-brand {
+    font-size: 35px;
+}
+
+.sub-title {
+    color: white;
+    padding-top: 30px;
+    padding-left: 80px;
+}
+#team-explanation {
+    color: white;
+    padding-left: 85px;
+    width: 85%;
+}
+
+#save-generate-team-btn.btn-primary {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 90px;
+    margin-bottom: 30px;
+    background-color: lightseagreen;
+    border: 0px;
+}
+
+/* Viewteam */
+.view-team-title {
+    color: white;
+    padding-top: 30px;
+    padding-left: 90px;
+}
+
+.card {
+    margin: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 40px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 20px;
+}
+
+.card-body {
+    padding-top: 30px;
+}
+
+.team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.card-row {
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+    width: 90%;
+}
+
+button.btn.delete-btn {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    background: red;
+    color: white;
+}

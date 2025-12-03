@@ -15,7 +15,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" id="view-team" href="viewteam.html">View Team</a>
                     </li>
@@ -31,9 +31,10 @@
 
     <div class="container">
         <div id="characters-container" class="row justtify-content-center"></div>
+        <button id="generate-team-btn" type="button" class="btn btn-primary">Generate team</button>
     </div>
 
-    <button id="generate-team-btn" type="button" class="btn btn-primary">Generate team</button>
+    
     
     <!-- Script code -->
     <script>
@@ -66,13 +67,17 @@
                     charDiv.classList.add('col-sm-3');
 
                     charDiv.innerHTML = `
-                        <div class="card character-card">
+                        <div class="card" style="height: 100%; width: 90%">
                             <img class="card-img-top" src="${char.img}">
-                                <h5 class="char-name">${char.characterName}</h5>
-                                <p>Path: ${char.characterPath}</p>
-                                <p>Element: ${char.characterElement}</p>
-                                <p>Rarity: ${char.characterRarity}</p>
-                                <button type="button" class="btn btn-primary">add</button>
+                            <div class="card-body">
+                                <h5 class="card-title">${char.characterName}</h5>
+                                <p class="card-text">Path: ${char.characterPath}</p>
+                                <p class="card-text">Element: ${char.characterElement}</p>
+                                <p class="card-text">Rarity: ${char.characterRarity}</p>
+                            </div>
+                            <div class="button-container">
+                                <button type="button" class="btn btn-primary">Add</button>
+                            </div>
                         </div>
                     `;
 

@@ -21,7 +21,7 @@
   "characterPath" : "Hunt",
   "characterElement" : "Quantum",
   "characterRarity" : 5,
-  "img" : "http://localhost:8080/images/Aglaea.jpg"
+  "img" : "http://localhost:8080/images/Archer.jpg"
 }, {
   "characterName" : "Argenti",
   "characterPath" : "Erudition",

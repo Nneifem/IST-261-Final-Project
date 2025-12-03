@@ -1,14 +1,31 @@
 /* Font and Background */
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-family:'Times New Roman', Times, serif;
+}
+
+body {
+    background-image: url('../images/hsrloading.png');
 }
 
 /* Sign Up and Login*/
-form {
-    margin: 30px;
-}
 .card-title {
-    padding: 30px;
+    margin-top: 40px;
+}
+
+h1.card-title.text-center.mb-4 {
+    color: white;
+}
+
+.mb-3 {
+    color: white;
+    width: 50%;
+}
+
+#login, #signUp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
 }
 
 button.btn.btn-primary {
@@ -17,11 +34,16 @@ button.btn.btn-primary {
     border: 0px;
 }
 
+#passwordHelp {
+    color: white;
+}
+
 .login-link a {
     color: lightcoral;
 }
 
 .login-link, .sign-up-link {
+    color: white;
     padding-top: 10px;
 }
 
@@ -34,76 +56,60 @@ button.btn.btn-primary {
 }
 
 /* Homepage */
-
+#home-link.navbar-brand {
+    font-size: 35px;
+}
 
 .sub-title {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 40px;
-    margin-left: 150px;
+    color: white;
+    font-size: 37px;
+    padding-top: 40px;
+    padding-left: 80px;
+    padding-bottom: 15px;
 }
 
-img {
-    width: 150px;
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-div.card.character-card {
-    height: 90%;
+.card-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 40px;
+    padding-bottom: 10px;
+    font-weight: bold;
 }
 
-.generate-team-btn {
-    margin: 20px;
+.card-text {
+    font-size: 20px;
+}
+
+.card-body {
+    flex-grow: 1;
 }
 
 div.col-sm-3 {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
     text-align: center;
 }
 
-h5.char-name {
-    font-size: 30px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-#team-container {
-    display: flex;
+#add-character {
     width: 90%;
-}
-
-div.card.generate-team-card {
-    height: 100%;
 }
 
 #generate-team-btn {
     display: flex;
-    font-size: 20px;
     background-color: lightseagreen;
-    align-content: center;
-    margin-left: 170px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    margin-left: 20px;
 }
 
-
-/* Viewteam */
-.view-team-title {
-    margin-top: 40px;
-    margin-left: 65px;
-}
-
-.team-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-div.card-row {
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-}
-
-button.btn.delete-btn {
-    background: red;
-    color: white;
+.button-container {
+    margin-top: auto;
+    margin-bottom: 20px;
 }
