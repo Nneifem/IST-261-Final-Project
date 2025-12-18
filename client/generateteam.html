@@ -7,7 +7,7 @@
     <title>Generate Team</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: black !important;">
         <div class="container-fluid">
             <a class="navbar-brand" id="home-link" href="homepage.html">Honkai Star Rail Team Match</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +24,6 @@
                 </ul>
             </div>
         </div>
-    </nav>
     </nav>
     <h3 class="sub-title">Your Generated Team:</h3>
     <div id="team-container">
@@ -70,7 +69,27 @@
                     const dot = userCharacters.find(c => c.characterPath === "Nihility");
                     const dps = userCharacters.find(c => c.characterPath === "Destruction" || c.characterPath === "Hunt" || c.characterPath === "Remembrance");
 
-                    [healer, shielder, buffer, dot, dps].forEach(c => {
+                    [dps, shielder, buffer, healer].forEach(c => {
+                        if (c && !team.includes(c)) team.push(c);
+                    });
+
+                    [dps, dps, buffer, healer].forEach(c => {
+                        if (c && !team.includes(c)) team.push(c);
+                    });
+
+                    [dps, dps, dps, healer].forEach(c => {
+                        if (c && !team.includes(c)) team.push(c);
+                    });
+
+                    [dps, dps, buffer, shielder].forEach(c => {
+                        if (c && !team.includes(c)) team.push(c);
+                    });
+
+                    [dot, dot, dot, healer].forEach(c => {
+                        if (c && !team.includes(c)) team.push(c);
+                    });
+
+                    [dot, dps, buffer, healer].forEach(c => {
                         if (c && !team.includes(c)) team.push(c);
                     });
 

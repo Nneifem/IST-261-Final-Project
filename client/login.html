@@ -50,7 +50,7 @@
 
                 const data = await response.json();
                 alert("Login successful!");
-                window.location.href = `homepage.html?username=${encodeURIComponent(usernameValue)}`;
+                window.location.href = `homepage.html?username=${encodeURIComponent(data.username)}`;
 
             } catch (error) {
                 console.error(error);

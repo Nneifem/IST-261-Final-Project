@@ -8,7 +8,7 @@
     <title>Homepage</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: black !important;">
         <div class="container-fluid">
             <a class="navbar-brand" id="home-link" href="homepage.html">Honkai Star Rail Team Match</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,7 +47,7 @@
         const characterList = document.getElementById('characters-container');
         const generateTeam = document.getElementById("generate-team-btn");
 
-        if (!username) {
+        if (!username || username === "null" || username.trim() === "" ) {
             alert("Username is not logged. Please login first.");
             window.location.href = "login.html";
         }

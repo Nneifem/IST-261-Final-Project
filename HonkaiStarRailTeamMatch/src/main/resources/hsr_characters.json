@@ -443,18 +443,6 @@
   "characterRarity" : 5,
   "img" : "http://localhost:8080/images/Trailblazer_The_Preservation.jpg"
 }, {
-  "characterName" : "Trailblazer Imaginary",
-  "characterPath" : "Harmony",
-  "characterElement" : "Imaginary",
-  "characterRarity" : 5,
-  "img" : "http://localhost:8080/images/Trailblazer_The_Harmony.jpg"
-}, {
-  "characterName" : "Trailblazer Preservation",
-  "characterPath" : "Preservation",
-  "characterElement" : "Fire",
-  "characterRarity" : 5,
-  "img" : "http://localhost:8080/images/Trailblazer_The_Preservation.jpg"
-}, {
   "characterName" : "Trailblazer Remembrance",
   "characterPath" : "Remembrance",
   "characterElement" : "Ice",

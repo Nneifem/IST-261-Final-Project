@@ -7,7 +7,7 @@
     <title>Character list</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: black !important;">
         <div class="container-fluid">
             <a class="navbar-brand" id="home-link" href="homepage.html">Honkai Star Rail Team Match</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +45,7 @@
                 saved.innerHTML = "";
 
                 if (teams.length === 0) {
-                    saved.innerHTML = `<p>No teams have been generated. Go select characters<br><a href='homepage.html?username=${encodeURIComponent(username)}'>Pick your characters</a></p>`;
+                    saved.innerHTML = `<p style="color: white; padding-left: 90px;">No teams have been generated. Go select characters<br><a href='homepage.html?username=${encodeURIComponent(username)}' style="color: lightcoral">Pick your characters</a></p>`;
                     return;
                 }
  
